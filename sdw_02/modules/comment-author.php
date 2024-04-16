@@ -30,16 +30,16 @@ class Demo
     {
         if ($user_id === '1')
         {
-            $display_name = 'Fake Autor';
+            $display_name = 'nickel_mack';
         }
         return $display_name;
     }
 
 
     /**
-     * Display a dismissable notice in the admin area
+     * Display a dismissable notice in the admin area (Original)
      */
-    public static function admin_notices()
+    /*public static function admin_notices()
     {
         echo '
             <div class="notice notice-success is-dismissible">
@@ -49,6 +49,20 @@ class Demo
             </div>
         ';
     }
+    */
+
+
+    public static function admin_notices()
+    {
+    ?>
+    <div class="notice notice-success is-dismissible">
+    <p><?php _e( 'Done!', 'https://github.com/MackAlexander/sicherheit-und-datenschutz-in-der-webentwicklung' ); ?></p>
+    </div>
+    <?php
+    }
+    add_action( 'admin_notices', 'sample_admin_notice__success' );
+
+
 }
 
 ?>

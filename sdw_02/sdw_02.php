@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: SDW-02
-Description: Sicherheit und Datenschutz in der Webentwicklung - Kapitel 1
-Version: 1.0.0
-Author: Technische Hochschule Mittelhessen
-Author URI: https://www.thm.de
+Description: Kopie der SDW-01 Plugin - Parallele Ausführung mit eigenem Namespace (SDW02)
+Version: 1.0.1
+Author: nickel_mack
+Author URI: https://github.com/MackAlexander/sicherheit-und-datenschutz-in-der-webentwicklung
 */
 
-namespace THM\Security;
+namespace THM\SDW02;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
