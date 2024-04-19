@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Own-01
+Plugin Name: Own Plugin
 Description: Sicherheit und Datenschutz in der Webentwicklung - Kapitel 1
 Version: 1.0.0
 Author: Jonas Nickel, Alexander Mack

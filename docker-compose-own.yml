@@ -29,6 +29,9 @@ services:
       - type: bind
         source: ./sdw_01
         target: /var/www/html/wp-content/plugins/sdw_01
+      - type: bind
+        source: ./own
+        target: /var/www/html/wp-content/plugins/own
     ports:
       - "80:80"
     restart: always
