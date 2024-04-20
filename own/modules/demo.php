@@ -15,13 +15,14 @@ class Demo
     public static function wp_footer()
     {
         global $start_time;
-        $memory_size = memory_get_usage();
+        $time = round(microtime(true) - $start_time, 2);
+        $memory_size = round(memory_get_usage() / 1024 / 1024, 2);
 
-        echo '
+        echo "
             <p>
-                Diese Seite wurde in' .(microtime(true) - $start_time ). 'gerendert, der maximale Speicherbedarf lag bei '. $memory_size .' MB.
+                Diese Seite wurde in ${time} ms gerendert, der maximale Speicherbedarf lag bei ${memory_size} MB.
             </p>
-        ';
+        ";
     }
 
     /**
