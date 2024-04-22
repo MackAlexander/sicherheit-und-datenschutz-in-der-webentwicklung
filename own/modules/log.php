@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once(dirname(__FILE__) . '/database.php');
 
 add_action('admin_menu', ['\THM\Own\Log', 'add_menu']);
-add_action('template_redirect', ['\THM\Own\Log', 'log_access']);
+add_action('init', ['\THM\Own\Log', 'log_access']);
 
 /**
  * Log module for the THM Security plugin.
@@ -91,6 +91,14 @@ class Log
      */
     public static function log_access()
     {
+        if (str_contains($_SERVER['REQUEST_URI'], 'favicon.ico')) {
+            return;
+        }
+
+        if (str_contains($_SERVER['REQUEST_URI'], '/wp-admin/tools.php?page=thm-security')) {
+            return;
+        }
+
         Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
     }
 }
