@@ -1,20 +1,20 @@
 version: "3.9"
-    
+
 services:
-  db:
+  db_own:
     image: mariadb:latest
     volumes:
-      - db_data:/var/lib/mysql
+      - db_own_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: own
+      MYSQL_DATABASE: own
+      MYSQL_USER: own
+      MYSQL_PASSWORD: own
 
   adminer:
     depends_on:
-      - db
+      - db_own
     image: adminer:latest
     ports:
       - "127.0.0.1:8042:8080"
@@ -22,7 +22,7 @@ services:
 
   wordpress:
     depends_on:
-      - db
+      - db_own
     image: wordpress:latest
     volumes:
       - wordpress_data:/var/www/html
@@ -39,10 +39,11 @@ services:
       - "80:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: db_own
+      WORDPRESS_DB_USER: own
+      WORDPRESS_DB_PASSWORD: own
+      WORDPRESS_DB_NAME: own
+
 volumes:
-  db_data: {}
+  db_own_data: {}
   wordpress_data: {}
