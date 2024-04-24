@@ -13,7 +13,7 @@ add_action('plugins_loaded',['THM\Own\Database', 'init'], 5);
  */
 class Database
 {
-    private static $db_version = '1';
+    private static $db_version = '3';
     private static $table_name = 'thm_security_access_log';
 
     /**
@@ -40,7 +40,12 @@ class Database
 		$table = "CREATE TABLE $db (
 			time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
             client VARCHAR(32) NOT NULL,
-            url VARCHAR(128) NOT NULL
+            url VARCHAR(128) NOT NULL,
+            method VARCHAR(8) NOT NULL,
+            protocol VARCHAR(8) NOT NULL,
+            user_agent VARCHAR(128) NOT NULL,
+            query_string VARCHAR(128) NOT NULL,
+            user_id INT
 		) $charset_collate;";
         dbDelta($table);
 
@@ -61,10 +66,10 @@ class Database
     /**
      * Add a new entry to the access log.
      */
-    public static function append_access_log($client, $url)
+    public static function append_access_log($client, $url, $method, $protocol, $user_agent, $query_string, $user_id)
     {
         global $wpdb;
         $table_name = $wpdb->prefix . self::$table_name;
-        $wpdb->insert($table_name, ['client' => $client, 'url' => $url]);
+        $wpdb->insert($table_name, ['client' => $client, 'url' => $url, 'method' => $method, 'protocol' => $protocol, 'user_agent' => $user_agent, 'query_string' => $query_string, 'user_id' => $user_id]);
     }
 }

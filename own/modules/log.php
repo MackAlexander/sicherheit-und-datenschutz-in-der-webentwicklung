@@ -58,6 +58,11 @@ class Log
                     <th>Timestamp</th>
                     <th>IP</th>
                     <th>URL</th>
+                    <th>Method</th>
+                    <th>Protocol</th>
+                    <th>User Agent</th>
+                    <th>Query String</th>
+                    <th>User ID</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,6 +71,11 @@ class Log
                         <td><?= esc_html($log->time) ?></td>
                         <td><?= esc_html($log->client) ?></td>
                         <td><?= esc_html($log->url) ?></td>
+                        <td><?= esc_html($log->method) ?></td>
+                        <td><?= esc_html($log->protocol) ?></td>
+                        <td><?= esc_html($log->user_agent) ?></td>
+                        <td><?= esc_html($log->query_string) ?></td>
+                        <td><?= esc_html($log->user_id) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -99,7 +109,9 @@ class Log
             return;
         }
 
-        Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
+        $user_id = get_current_user_id();
+
+        Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['SERVER_PROTOCOL'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['QUERY_STRING'], $user_id ? : null);
     }
 }
 
