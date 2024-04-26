@@ -18,5 +18,5 @@ apt install vim htop curl iputils-ping iproute2 -y
 Dokumentation von WPScan: [Link](https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation#enumeration-modes)
 
 ```
-docker run -it --rm --network host wpscanteam/wpscan --update-database  --url http://127.0.0.1 --enumerate vp
+docker run -it --rm --network host wpscanteam/wpscan --update --url http://127.0.0.1 --enumerate vp
 ```
