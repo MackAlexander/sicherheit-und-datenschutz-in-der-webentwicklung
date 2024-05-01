@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once(dirname(__FILE__) . '/database.php');
 
 add_action('admin_menu', ['\THM\Own\Log', 'add_menu']);
-add_action('init', ['\THM\Own\Log', 'log_access']);
+add_action('shutdown', ['\THM\Own\Log', 'log_access']);
 
 /**
  * Log module for the THM Security plugin.
@@ -62,6 +62,7 @@ class Log
                     <th>Protocol</th>
                     <th>User Agent</th>
                     <th>Query String</th>
+                    <th>Response Code</th>
                     <th>User ID</th>
                 </tr>
             </thead>
@@ -75,6 +76,7 @@ class Log
                         <td><?= esc_html($log->protocol) ?></td>
                         <td><?= esc_html($log->user_agent) ?></td>
                         <td><?= esc_html($log->query_string) ?></td>
+                        <td><?= esc_html($log->response_code) ?></td>
                         <td><?= esc_html($log->user_id) ?></td>
                     </tr>
                 <?php endforeach; ?>
@@ -109,9 +111,22 @@ class Log
             return;
         }
 
+        if (str_contains($_SERVER['REQUEST_URI'], '/wp-admin/admin-ajax.php')) {
+            return;
+        }
+
+        /*foreach($_SERVER as $key => $value) {
+            if (substr($key, 0, 5) <> 'HTTP_') {
+                continue;
+            }
+            $header = $key . ': ' . $value;
+
+            error_log($header, 0);
+        }*/        
+
         $user_id = get_current_user_id();
 
-        Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['SERVER_PROTOCOL'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['QUERY_STRING'], $user_id ? : null);
+        Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['SERVER_PROTOCOL'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['QUERY_STRING'], http_response_code(),$user_id ? : null);
     }
 }
 
