@@ -39,3 +39,8 @@ function print_json($response)
 {
     echo json_encode($response, JSON_PRETTY_PRINT);
 }
+
+// Test 1: Check if username is hidden in HTML
+$response = get('http://localhost/author/admin');
+assert(strpos($response['body'], 'admin') === false);
+print_json($response);
