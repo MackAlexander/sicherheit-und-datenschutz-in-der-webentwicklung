@@ -18,4 +18,9 @@ http://localhost/wp-json/wp/v2/users/
 http://localhost/wp-json/wp/v2/users/1
 http://localhost/author/skywalker/
 http://localhost/?author=1
+http://localhost/wp-sitemap-users-1.xml
+http://localhost/feed/
+http://localhost/wp-json/oembed/1.0/embed?url={url}
+Blog Posts
+Blog Comments
 RSS Generator
