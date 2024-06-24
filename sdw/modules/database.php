@@ -68,6 +68,19 @@ class Database
         return $total_points;
     }
 
+    public static function remove_old_logs($days)
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . self::$access_log_table_name;
+
+        $query = $wpdb->prepare(
+            "DELETE FROM $table_name WHERE time < NOW() - INTERVAL %d DAY",
+            $days
+        );
+
+        $wpdb->query($query);
+    }
+
     public static function is_ip_blocked($ip_address)
     {
         global $wpdb;
