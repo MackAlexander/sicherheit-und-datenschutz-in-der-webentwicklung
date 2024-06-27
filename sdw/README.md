@@ -1,5 +1,30 @@
 # THM Security Plugin
 
+> **Note**
+> This is a note
+
+> **Warning**
+> This is a warning
+
+
+> [!NOTE]  
+> Test
+
+> [!TIP]
+> Test
+
+> [!IMPORTANT]  
+> Test
+
+> [!WARNING]  
+> Test
+
+> [!CAUTION]
+> Test
+
+
+
+
 !!!!TIP  Beschreibung
     Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
 
