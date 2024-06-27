@@ -5,6 +5,8 @@ namespace THM\Security;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once(dirname(__FILE__) . '/database.php');
+require_once(dirname(__FILE__) . '/classifier.php');
+require_once(dirname(__FILE__) . '/blocker.php');
 
 add_action('admin_menu', ['\THM\Security\Log', 'add_menu']);
 add_action('shutdown', ['\THM\Security\Log', 'log_access']);
@@ -14,6 +16,8 @@ add_action('shutdown', ['\THM\Security\Log', 'log_access']);
  */
 class Log
 {
+    private static $ban_duration = 7; //Ban duration in days
+
     /**
      * Adds a menu item to the tools menu.
      */
@@ -59,25 +63,23 @@ class Log
                     <th>IP</th>
                     <th>URL</th>
                     <th>Method</th>
-                    <th>Protocol</th>
                     <th>User Agent</th>
-                    <th>Query String</th>
                     <th>Response Code</th>
-                    <th>User ID</th>
+                    <th>Classification</th>
+                    <th>Points</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach($logs as $log): ?>
                     <tr>
                         <td><?= esc_html($log->time) ?></td>
-                        <td><?= esc_html($log->client) ?></td>
+                        <td><?= esc_html($log->ip_address) ?></td>
                         <td><?= esc_html($log->url) ?></td>
                         <td><?= esc_html($log->method) ?></td>
-                        <td><?= esc_html($log->protocol) ?></td>
                         <td><?= esc_html($log->user_agent) ?></td>
-                        <td><?= esc_html($log->query_string) ?></td>
                         <td><?= esc_html($log->response_code) ?></td>
-                        <td><?= esc_html($log->user_id) ?></td>
+                        <td><?= esc_html($log->classification) ?></td>
+                        <td><?= esc_html($log->points) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -103,30 +105,22 @@ class Log
      */
     public static function log_access()
     {
-        if (str_contains($_SERVER['REQUEST_URI'], 'favicon.ico')) {
+        if(Database::is_ip_blocked($_SERVER['REMOTE_ADDR']))
+        {
             return;
         }
 
-        if (str_contains($_SERVER['REQUEST_URI'], '/wp-admin/tools.php?page=thm-security')) {
-            return;
-        }
+        $classification = Classifier::classify_request();
 
-        if (str_contains($_SERVER['REQUEST_URI'], '/wp-admin/admin-ajax.php')) {
-            return;
-        }
-
-        /*foreach($_SERVER as $key => $value) {
-            if (substr($key, 0, 5) <> 'HTTP_') {
-                continue;
+        if($classification !== "normal") {
+            $points = Blocker::calculate_points($classification);
+            Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['HTTP_USER_AGENT'], http_response_code(), $classification, $points);
+        
+            if(Database::get_total_points($_SERVER['REMOTE_ADDR'])> 50)
+            {
+                Database::ban_ip($_SERVER['REMOTE_ADDR'], self::$ban_duration);
             }
-            $header = $key . ': ' . $value;
-
-            error_log($header, 0);
-        }*/        
-
-        $user_id = get_current_user_id();
-
-        Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['SERVER_PROTOCOL'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['QUERY_STRING'], http_response_code(),$user_id ? : null);
+        }
     }
 }
 

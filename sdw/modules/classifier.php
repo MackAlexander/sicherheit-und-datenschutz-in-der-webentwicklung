@@ -4,14 +4,12 @@ namespace THM\Security;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-add_filter('wp_loaded',['THM\Security\Classifier', 'init'], 5);
-
 /**
- * Database module for the THM Security plugin.
+ * Classifier module for the THM Security plugin.
  */
 class Classifier
 {
-    public static function init()
+    public static function classify_request()
     {
         $request_class = 'normal';
 
@@ -20,13 +18,6 @@ class Classifier
             $request_class = 'config-grabber';
         }
 
-        header("X-THMSEC: ENABLED");
-        header("X-THMSEC-CLASS: $request_class");
-
-        if ($request_class != 'normal')
-        {
-            header("HTTP/1.1 404 Not Found");
-            exit;
-        }
+        return $request_class;
     }
 }
