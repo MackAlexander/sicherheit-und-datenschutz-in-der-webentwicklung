@@ -156,6 +156,6 @@
 > [!Note]
 > **🧩 Links zu den Modulen**
 >
->    🔗[README.md](README.md)
+>    🔗[README.md](../README.md)
 > 
 >    🔗[badrequest-tracker.md](badrequest-tracker.md)
