@@ -9,6 +9,16 @@
 > **🚀 Mehrwert**
 > 
 > Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von **Plugins** und **Themes** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
+
+> [!NOTE] 
+> **🚧 Angrenzung**
+> #### Dieses Plugin:
+> - ist nur für WordPress geeignet
+> - protokolliert nur bösartige Requests
+> - trackt nur Requests zum Schutz vor bekannten Wordpress Themes und Plugins mit Sicherheitslücken
+> - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
+> - ist **NICHT** geeignet, für einen vollständigen Schutz vor Hackern geeignet
+
 #
 > [!WARNING]
 >
@@ -32,7 +42,7 @@
 > 
 >    **2**. Dies gewährleistet die Sicherheit der Anwendung und schädliche Aktivitäten werden verhindert.
 > 
->    **3**. Das Plugin nutzt diese Daten, um IP Adressen zu blockieren und den Zugriff auf die Anwendungen auf Ihrer Website zu sichern.
+>    **3**. Das Plugin nutzt diese Daten, um IP-Adressen zu blockieren und den Zugriff auf die Anwendungen auf Ihrer Website zu sichern.
 > 
 >    **4**. Es handelt sich hierbei um personenbezogene Daten nach DSGVO.
 > 
@@ -43,7 +53,7 @@
 > 
 >    **1**. Zeitstempel der Abfragen werden erfasst, um Muster zu erkennen und mögliche Missbrauchsversuche zu analysieren.
 > 
->    **2**. Dies wird vom Plugin verwendet um die Nutzungsmuster zu analysieren und die Leistung der Anwendung zu optimieren.
+>    **2**. Dies wird vom Plugin verwendet, um die Nutzungsmuster zu analysieren und die Leistung der Anwendung zu optimieren.
 > 
 >    **3**. Das Plugin nutzt diese Informationen zur Analyse von Nutzungsmustern und zur Leistungsoptimierung.
 > 
@@ -69,7 +79,7 @@
 > 
 >    **1**. POST-Daten können Formularinhalte oder Login-Daten enthalten, die zur Authentifizierung und Verarbeitung der Benutzeranfragen benötigt werden.
 > 
->    **2**. Zur Verarbeitung von Formularen und Authentifizierungsanfragen, werden diese Daten benötigt.
+>    **2**. Zur Verarbeitung von Formularen und Authentifizierungsanfragen werden diese Daten benötigt.
 > 
 >    **3**. Diese Daten werden zur Authentifizierung und Verarbeitung von Benutzeranfragen verwendet.
 > 
@@ -82,7 +92,7 @@
 > 
 >    **1**. Das HTTP-Protokoll selbst enthält keine personenbezogenen Daten, wird aber zur Verarbeitung der Anfragen verwendet.
 > 
->    **2**. Zur Abwicklung der Kommunikation zwischen Server und Client, werden diese Daten benötigt.
+>    **2**. Zur Abwicklung der Kommunikation zwischen Server und Client werden diese Daten benötigt.
 > 
 >    **3**. Diese Informationen werden zur Verwaltung der Kommunikation zwischen Server und Client genutzt.
 > 
@@ -95,7 +105,7 @@
 > 
 >    **1**. Der Query-String kann Suchparameter oder Filterkriterien enthalten, die zur Verarbeitung und Beantwortung der Benutzeranfragen genutzt werden.
 > 
->    **2**. Zur Verarbeitung und Filterung von Suchanfragen und anderen Parametern, werden diese Daten benötigt.
+>    **2**. Zur Verarbeitung und Filterung von Suchanfragen und anderen Parametern werden diese Daten benötigt.
 > 
 >    **3**. Diese Daten werden zur Bearbeitung und Beantwortung von Benutzeranfragen verwendet.
 > 
@@ -108,7 +118,7 @@
 > 
 >    **1**. Wenn verfügbar, wird die User ID gesammelt, um Benutzeranfragen zuzuordnen und Benutzersitzungen zu verwalten.
 > 
->    **2**. Zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung, werden diese Daten benötigt.
+>    **2**. Zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung werden diese Daten benötigt.
 > 
 >    **3**. Diese Daten werden zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung genutzt.
 > 
@@ -121,7 +131,7 @@
 > 
 >    **1**. Der User-Agent wird gesammelt, um das verwendete Gerät und den Browser zu identifizieren, was zur Verbesserung der Kompatibilität und Sicherheit der Anwendung beiträgt.
 > 
->    **2**. Zur Verbesserung der Kompatibilität und Sicherheit der Anwendung, werden diese Daten benötigt.
+>    **2**. Zur Verbesserung der Kompatibilität und Sicherheit der Anwendung werden diese Daten benötigt.
 > 
 >    **3**. Diese Informationen werden zur Verbesserung der Kompatibilität und Sicherheit der Anwendung genutzt.
 > 
@@ -134,7 +144,7 @@
 > 
 >    **1**. Alle Anfragen werden analysiert, um schädliche Aktivitäten zu erkennen und zu verhindern.
 > 
->    **2**. Zur Identifizierung und Verhinderung von schädlichen Aktivitäten, werden diese Daten benötigt.
+>    **2**. Zur Identifizierung und Verhinderung von schädlichen Aktivitäten werden diese Daten benötigt.
 > 
 >    **3**. Diese Daten werden zur Analyse und Verhinderung von schädlichen Aktivitäten verwendet.
 > 
@@ -155,7 +165,7 @@
 > [!Warning]
 > **⏳ Wie lange werden die Daten gespeichert?**
 >    - Die Daten werden für maximal **30 Tage** gespeichert und danach automatisch gelöscht.
->    - Durch das Deaktivieren oder das Löschen dieses Wordpress-Plugins werden alle personenbezogene Daten gelöscht, indem das Plugin die gesamten Tabellen löscht, welche personenbezogene Daten enthalten.
+>    - Durch das Deaktivieren oder das Löschen dieses WordPress-Plugins werden alle personenbezogene Daten gelöscht, indem das Plugin die gesamten Tabellen löscht, welche personenbezogene Daten enthalten.
 
 > [!Warning]
 > **🗑️ Was passiert danach mit den Daten?**
@@ -187,7 +197,7 @@
 #
 #   
 > [!Important]
-> **✔️ Hooks und Filter**
+> **⚓ Hooks und Filter**
 >
 >    - shutdown: Wird ausgeführt, unmittelbar bevor PHP die Ausführung beendet. Überprüft und blendet Benutzernamen aus.
 >    - Dieser Hook wird von  shutdown_action_hook() aufgerufen und von register_shutdown_function()  in  als Shutdown-Funktion bei PHP registriert wp-settings.php.
