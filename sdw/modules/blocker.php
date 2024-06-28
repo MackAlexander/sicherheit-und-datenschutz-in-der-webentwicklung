@@ -29,6 +29,8 @@ class Blocker
         {
             case "config-grabber":
                 return 5;
+            case "wp-scan":
+                return 10;
         }
     }
 }

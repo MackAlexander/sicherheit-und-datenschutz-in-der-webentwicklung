@@ -116,7 +116,7 @@ class Log
             $points = Blocker::calculate_points($classification);
             Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['HTTP_USER_AGENT'], http_response_code(), $classification, $points);
         
-            if(Database::get_total_points($_SERVER['REMOTE_ADDR'])> 50)
+            if(Database::get_total_points($_SERVER['REMOTE_ADDR']) >= 50)
             {
                 Database::ban_ip($_SERVER['REMOTE_ADDR'], self::$ban_duration);
             }

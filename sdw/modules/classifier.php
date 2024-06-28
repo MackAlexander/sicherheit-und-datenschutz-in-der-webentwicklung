@@ -17,6 +17,10 @@ class Classifier
         {
             $request_class = 'config-grabber';
         }
+        if (preg_match('/\/wpscan.com/i', $_SERVER['HTTP_USER_AGENT']))
+        {
+            $request_class = 'wp-scan';
+        }
 
         return $request_class;
     }
