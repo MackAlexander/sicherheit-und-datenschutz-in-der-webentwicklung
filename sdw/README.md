@@ -10,7 +10,7 @@
 > 
 > Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von **Plugins** und **Themes** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
 #
-> [!IMPORTANT]
+> [!WARNING]
 >
 >  **🔒 Datenschutzinformationen für den Endanwender**
 >
@@ -25,7 +25,7 @@
 > 
 >    - ###### Kurze Zusammenfassung des Stichpunkts.
 
-> [!Caution] 
+> [!IMPORTANT]
 > **🌐 IP-Adressen**
 > 
 >    **1**. Diese Daten werden gesammelt, um potenziell unerwünschte oder schädliche Anfragen zu identifizieren und zu blockieren.
@@ -38,7 +38,7 @@
 > 
 >    - ###### Kurz: Das Plugin benötigt werden diese Daten, um die Sicherheit der Anwendung zu gewährleisten und schädliche Aktivitäten zu verhindern.
 
-> [!Caution]
+> [!IMPORTANT]
 > **⏱️ Zeit der Anfrage**
 > 
 >    **1**. Zeitstempel der Abfragen werden erfasst, um Muster zu erkennen und mögliche Missbrauchsversuche zu analysieren.
@@ -51,7 +51,7 @@
 > 
 >    - ###### Kurz: Zeitstempel der Anfragen werden erfasst, um Angriffsmuster zu erkennen und die Anwendung zu optimieren (keine personenbezogenen Daten).
 
-> [!Caution]
+> [!IMPORTANT]
 > **🧭 URL der Anfrage**
 > 
 >    **1**. Die URL der Anfrage wird gesammelt, um zu überprüfen, welche Seiten oder Ressourcen aufgerufen werden und ob diese Anfragen legitim sind.
@@ -64,7 +64,7 @@
 > 
 >    - ###### Kurz: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
 
-> [!Caution]
+> [!IMPORTANT]
 > **📄 POST-Daten**
 > 
 >    **1**. POST-Daten können Formularinhalte oder Login-Daten enthalten, die zur Authentifizierung und Verarbeitung der Benutzeranfragen benötigt werden.
@@ -77,7 +77,7 @@
 > 
 >    - ###### Kurz: POST-Daten (Formulare, Login-Daten) werden für die Authentifizierung und Benutzeranfragen verarbeitet (möglicherweise personenbezogene Daten).
 
-> [!Caution]
+> [!IMPORTANT]
 > **🌐 HTTP/1.1**
 > 
 >    **1**. Das HTTP-Protokoll selbst enthält keine personenbezogenen Daten, wird aber zur Verarbeitung der Anfragen verwendet.
@@ -90,7 +90,7 @@
 > 
 >    - ###### Kurz: Das HTTP-Protokoll selbst ist datenneutral, wird aber für die Verarbeitung von Anfragen verwendet, die personenbezogene Daten enthalten können.
 
-> [!Caution]
+> [!IMPORTANT]
 > **🧵 Query-String**
 > 
 >    **1**. Der Query-String kann Suchparameter oder Filterkriterien enthalten, die zur Verarbeitung und Beantwortung der Benutzeranfragen genutzt werden.
@@ -103,7 +103,7 @@
 > 
 >    - ###### Kurz: Der Query-String (Suchparameter, Filterkriterien) wird zur Verarbeitung und Beantwortung von Anfragen genutzt und kann personenbezogene Daten enthalten.
 
-> [!Caution]
+> [!IMPORTANT]
 > **🆔 User ID**
 > 
 >    **1**. Wenn verfügbar, wird die User ID gesammelt, um Benutzeranfragen zuzuordnen und Benutzersitzungen zu verwalten.
@@ -116,7 +116,7 @@
 > 
 >    - ###### Kurz: Das Plugin sammelt datenschutzrelevante Daten, um Benutzeranfragen zuzuordnen und zu verwalten, wobei es sich um personenbezogene Daten handelt.
 
-> [!Caution]
+> [!IMPORTANT]
 > **🧑‍💻 User-Agent**
 > 
 >    **1**. Der User-Agent wird gesammelt, um das verwendete Gerät und den Browser zu identifizieren, was zur Verbesserung der Kompatibilität und Sicherheit der Anwendung beiträgt.
@@ -129,7 +129,7 @@
 > 
 >    - ###### Kurz: Die Sammlung des User-Agents zur Verbesserung der Kompatibilität und Sicherheit ist DSGVO-konform, solange die Daten zweckgebunden, minimiert und nicht für Trackingzwecke verwendet werden. Bedenken Sie die Anonymisierung/Pseudonymisierung zum Datenschutz.
 
-> [!Caution]
+> [!IMPORTANT]
 > **💬 Anfragen**
 > 
 >    **1**. Alle Anfragen werden analysiert, um schädliche Aktivitäten zu erkennen und zu verhindern.
