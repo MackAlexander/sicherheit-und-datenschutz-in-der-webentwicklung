@@ -65,6 +65,6 @@
 > [!Note]
 > **🧩 Links zu den Modulen**
 >
->    🔗[README.md](README.md)
+>    🔗[README.md](../README.md)
 > 
 >    🔗[username-enumeration.md](username-enumeration.md)
