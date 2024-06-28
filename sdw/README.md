@@ -197,6 +197,6 @@
 > [!Note]
 > **🧩 Links zu den Modulen**
 >
->    🔗[username-enumeration.md](username-enumeration.md)
+>    🔗[username-enumeration.md](docs/username-enumeration.md)
 > 
->    🔗[badrequest-tacker.md](badrequest-tracker.md)
+>    🔗[badrequest-tacker.md](docs/badrequest-tracker.md)
