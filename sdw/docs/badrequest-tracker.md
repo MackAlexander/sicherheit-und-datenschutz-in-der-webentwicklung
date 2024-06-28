@@ -1,4 +1,4 @@
-# THM Security Plugin
+# badrequest-tracker
 
 > [!TIP]
 > **🔍 Beschreibung**
