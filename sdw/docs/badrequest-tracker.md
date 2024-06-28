@@ -7,7 +7,7 @@
 
 ## Funktionen
 
-> [!IMPORTANT]
+> [!WARNING]
 >  **📚 Inhalt**
 > 
 >    - **⛔ Nutzersperrungen**
@@ -24,7 +24,7 @@
 >             - Höhere Punkteeinstieg nach Reset
 >             - Gleichbleibender exponentieller Punkteanstieg
 
-> [!Caution]
+> [!IMPORTANT]
 >
 > ### ⛔ Nutzersperrungen
 >    #### 🚫 Sperrungen nach Anzahl bösartiger Requests
@@ -35,7 +35,7 @@
 >    - Tabelleneinträge, die bereits 30 Tage gespeichert wurden, werden gelöscht und mit der Löschung auch der damalige Punktestand und der Nutzer wird entsperrt.
 
 
-> [!Caution]
+> [!IMPORTANT]
 >
 > ### 🏆 Punktesystem
 >
@@ -49,7 +49,7 @@
 >    - **Exponentielles Ansteigen der Punkte nach Anzahl bösartiger Requests**
 >    Wiederholte bösartige Requests geben exponentiell mehr Punkte, was zu einer schnelleren Sperrung des Nutzers führt.
 
-> [!Caution]
+> [!IMPORTANT]
 >
 >  ### 🗑️ Punktereset
 > 
