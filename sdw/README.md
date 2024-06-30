@@ -194,8 +194,7 @@
 > [!Note]
 > **📊 Tabellen in der Datenbank**
 >   - Das Plugin erstellt zusätzliche Tabellen in der WordPress-Datenbank
-#
-#   
+
 > [!Important]
 > **⚓ Hooks und Filter**
 >
