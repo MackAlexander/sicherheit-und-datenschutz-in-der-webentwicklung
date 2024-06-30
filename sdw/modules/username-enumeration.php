@@ -2,6 +2,8 @@
 
 namespace THM\Security;
 
+
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 add_action('user_register', ['THM\Security\Username', 'user_register'], 10, 2);
@@ -13,7 +15,6 @@ add_filter('the_author', ['THM\Security\Username', 'the_author'], 10, 1);
 add_filter('get_the_author_display_name', ['THM\Security\Username', 'get_the_author_display_name'], 10, 3);
 add_filter('get_comment_author', ['THM\Security\Username', 'get_comment_author'], 10, 3);
 add_filter('author_link', ['THM\Security\Username', 'author_link'], 10, 3);
-//add_filter('get_comment_author_url', ['THM\Security\Username', 'comment_author_url'], 10, 3); //ToDo check if needed
 add_filter('login_errors', ['THM\Security\Username', 'login_errors'], 10, 1);
 add_filter('rest_endpoints', ['THM\Security\Username', 'rest_endpoints'], 10, 1);
 add_filter('oembed_response_data', ['THM\Security\Username', 'oembed_response_data'], 10, 4);
@@ -201,13 +202,4 @@ class Username
     
         return $provider;
     }
-
-    /**
-     * Disables the comment author url completly
-     */
-    /*public static function comment_author_url($comment_author_url, $comment_id, $comment)
-    {
-        $comment_author_url = false;
-        return $comment_author_url;
-    }*/
 }
