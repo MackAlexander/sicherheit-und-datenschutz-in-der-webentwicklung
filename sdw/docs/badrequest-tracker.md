@@ -54,7 +54,7 @@
 >  ### 🗑️ Punktereset
 > 
 >    - Tabelleneinträge, die bereits 30 Tage gespeichert wurden, werden gelöscht und mit der Löschung auch der damalige Punktestand und der Nutzer wird entsperrt. Die Punkte, die der Nutzer vor den 30 Tagen auf seinem Punktekonto hat, sind gelöscht und sofern die gespeicherten Punkte die Sperrpunktzahl nicht überschreiten, bleibt der Nutzer entsperrt, bzw. wird entsperrt beim Unterschreiten der Sperrpunktzahl.
->    #### ⛰️ Höhere Punkteeinstieg nach Reset
+>    #### ⛰️ Höherer Punkteeinstieg nach Reset
 >    - Gespeicherte Punkte von vor 30 Tagen sind zwar gelöscht, dennoch bleiben die durch die exponentielle Punktevergabe erlangten Punkte, die noch kleine 30 Tage alt sind erhalten
 >
 >    #### 🔍 Beispiel
