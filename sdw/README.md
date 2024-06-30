@@ -11,7 +11,7 @@
 > Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von **Plugins** und **Themes** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
 
 > [!NOTE] 
-> **🚧 Angrenzung**
+> **🚧 Abgrenzung**
 > #### Dieses Plugin:
 > - ist nur für WordPress geeignet
 > - protokolliert nur bösartige Requests
