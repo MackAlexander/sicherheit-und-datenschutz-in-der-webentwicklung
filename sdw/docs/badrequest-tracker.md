@@ -58,7 +58,7 @@
 >    - Gespeicherte Punkte von vor 30 Tagen sind zwar gelöscht, dennoch bleiben die durch die exponentielle Punktevergabe erlangten Punkte, die noch kleine 30 Tage alt sind erhalten
 >
 >    #### 🔍 Beispiel
->    - Ein Nutzer machte 3 bösartige Request vor 31 Tagen mit einer exponentiellen Punktevergabe von 5, 10 und 20. Der Nutzer machte vor 29 Tagen einen bösartigen Request mit 40 Punkten. Zu dem Zeitpunkt bleiben die durch die exponentielle Kurve erlangten 40 Punkte erhalten, neue bösartige Requests geben dem Nutzer jedoch wieder 5, 10, 20,.. Punkte somit 45, 50, 70,...
+>    - Ein Nutzer machte 3 bösartige Request vor 31 Tagen mit einer exponentiellen Punktevergabe von 5, 10 und 20. Der Nutzer machte vor 29 Tagen einen bösartigen Request mit 40 Punkten. Zu dem Zeitpunkt bleiben die durch die exponentielle Kurve erlangten 40 Punkte erhalten, neue bösartige Requests geben dem Nutzer jedoch wieder 5, 10, 20,.. Punkte somit 45, 55, 75,...
 >    #### ⚖️ Gleichbleibender exponentieller Punkteanstieg
 >    - Bei 30 Tagen ohne bösartiger Requests bekommt der Nutzer, auch bei Vorstoß von vor 30 Tagen wieder 5, 10, 20,.. Punkte, da die älteren Requests gelöscht bleiben und somit auch die gespeicherten Punkte
 
