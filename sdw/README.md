@@ -17,7 +17,7 @@
 > - protokolliert nur bösartige Requests
 > - trackt nur Requests zum Schutz vor bekannten Wordpress Themes und Plugins mit Sicherheitslücken
 > - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
-> - ist **NICHT** geeignet, für einen vollständigen Schutz vor Hackern geeignet
+> - ist **NICHT** für einen vollständigen Schutz vor Hackern geeignet
 
 #
 > [!WARNING]
@@ -25,15 +25,15 @@
 >  **🔒 Datenschutzinformationen für den Endanwender**
 >
 >    ### Übersicht:
->    **1**. Beschreibt, welche Daten das Plugins sammelt.
+>    **1**. Beschreibt, welche Daten das Plugins sammelt
 > 
->    **2**. Beschreibt, warum das Plugin diese Daten benötigt.
+>    **2**. Beschreibt, warum das Plugin diese Daten benötigt
 > 
->    **3**. Beschreibt, was das Plugin macht mit diesen Daten macht.
+>    **3**. Beschreibt, was das Plugin macht mit diesen Daten macht
 > 
->    **4**. Beschreibt, ob die gesammelten Daten personenbezogen sind.
+>    **4**. Beschreibt, ob die gesammelten Daten personenbezogen sind
 > 
->    - ###### Kurze Zusammenfassung des Stichpunkts.
+>    - ###### Kurze Zusammenfassung des Stichpunkts
 
 > [!IMPORTANT]
 > **🌐 IP-Adressen**
