@@ -41,5 +41,6 @@ class Cron
     public static function remove_old_logs()
     {
         Database::remove_old_logs(30);
+        Database::remove_old_bans();
     }
 }

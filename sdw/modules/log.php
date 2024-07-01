@@ -4,20 +4,13 @@ namespace THM\Security;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-require_once(dirname(__FILE__) . '/database.php');
-require_once(dirname(__FILE__) . '/classifier.php');
-require_once(dirname(__FILE__) . '/blocker.php');
-
 add_action('admin_menu', ['\THM\Security\Log', 'add_menu']);
-add_action('shutdown', ['\THM\Security\Log', 'log_access']);
 
 /**
  * Log module for the THM Security plugin.
  */
 class Log
 {
-    private static $ban_duration = 7; //Ban duration in days
-
     /**
      * Adds a menu item to the tools menu.
      */
@@ -103,24 +96,9 @@ class Log
     /**
      * Logs any access to the website into the database.
      */
-    public static function log_access()
+    public static function insert_log($ip, $url, $method, $user_agent, $response_code, $classification, $points)
     {
-        if(Database::is_ip_blocked($_SERVER['REMOTE_ADDR']))
-        {
-            return;
-        }
-
-        $classification = Classifier::classify_request();
-
-        if($classification !== "normal") {
-            $points = Blocker::calculate_points($classification);
-            Database::append_access_log($_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'], $_SERVER['HTTP_USER_AGENT'], http_response_code(), $classification, $points);
-        
-            if(Database::get_total_points($_SERVER['REMOTE_ADDR']) >= 50)
-            {
-                Database::ban_ip($_SERVER['REMOTE_ADDR'], self::$ban_duration);
-            }
-        }
+        Database::append_access_log($ip, $url, $method, $user_agent, $response_code, $classification, $points);
     }
 }
 

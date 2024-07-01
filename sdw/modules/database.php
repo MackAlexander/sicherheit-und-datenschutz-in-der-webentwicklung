@@ -81,6 +81,15 @@ class Database
         $wpdb->query($query);
     }
 
+    public static function remove_old_bans()
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . self::$bans_table_name;
+
+        $query = "DELETE FROM $table_name WHERE end_time < NOW()";
+        $wpdb->query($query);
+    }
+
     public static function is_ip_blocked($ip_address)
     {
         global $wpdb;
