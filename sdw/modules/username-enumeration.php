@@ -6,6 +6,8 @@ namespace THM\Security;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+require_once(dirname(__FILE__) . '/config.php');
+
 add_action('user_register', ['THM\Security\Username', 'user_register'], 10, 2);
 add_action('profile_update', ['THM\Security\Username', 'profile_update'], 10, 3);
 add_action('user_profile_update_errors', ['THM\Security\Username', 'user_profile_update_errors'], 10, 3);
@@ -31,7 +33,7 @@ class Username
      */
     public static function user_register($user_id, $userdata) 
     {
-        wp_update_user(array('ID' => $user_id, 'nickname' => 'Anonymous', 'display_name' =>  'Anonymous'));
+        wp_update_user(array('ID' => $user_id, 'nickname' => Config::DEFAULT_NAME, 'display_name' =>  Config::DEFAULT_NAME));
     }
 
     /**
@@ -42,7 +44,7 @@ class Username
         $user = get_userdata($user_id);
         if($user->display_name === $user->user_login)
         {
-            wp_update_user(array('ID' => $user_id, 'nickname' => 'Anonymous', 'display_name' =>  'Anonymous'));
+            wp_update_user(array('ID' => $user_id, 'nickname' => Config::DEFAULT_NAME, 'display_name' =>  Config::DEFAULT_NAME));
         }
     }
 
@@ -82,10 +84,10 @@ class Username
     {
         $user = wp_get_current_user();
 
-        if($user->display_name === 'Anonymous')
+        if($user->display_name === Config::DEFAULT_NAME)
         {
             echo '<div class="notice notice-warning">
-                <p>Your display name has been initially set to "Anonymous". Please change your Nickname to a meaningful name which is not your login name and change your display name accordingly.</p>
+                <p>Your display name has been initially set to ' . Config::DEFAULT_NAME . '. Please change your Nickname to a meaningful name which is not your login name and change your display name accordingly.</p>
                 <p>Please go to your <a href="/wp-admin/profile.php">profile</a> and change your display name.</p>
             </div>';
         }
@@ -101,7 +103,7 @@ class Username
     {
         if (username_exists($display_name))
         {
-            $display_name = 'Anonymous';
+            $display_name = Config::DEFAULT_NAME;
         }
         return $display_name;
     }
@@ -115,7 +117,7 @@ class Username
     {
         if (username_exists($display_name))
         {
-            $display_name = 'Anonymous';
+            $display_name = Config::DEFAULT_NAME;
         }
         return $display_name;
     }
@@ -136,7 +138,7 @@ class Username
 
         if (username_exists($comment_author))
         {
-            $comment_author = 'Anonymous';
+            $comment_author = Config::DEFAULT_NAME;
         }
 
         return $comment_author;

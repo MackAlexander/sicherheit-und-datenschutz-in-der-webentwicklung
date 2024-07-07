@@ -34,18 +34,18 @@ class Database
     /**
      * Add a new entry to the access log.
      */
-    public static function append_access_log($ip_address, $url, $method, $user_agent, $response_code, $classification, $points)
+    public static function append_access_log($ip_address, $url, $user_agent, $response_code, $classification, $points)
     {
         global $wpdb;
         $table_name = $wpdb->prefix . self::$access_log_table_name;
         $query = $wpdb->prepare(
             "
             INSERT INTO $table_name 
-            (ip_address, url, method, user_agent, response_code, classification, points) 
+            (ip_address, url, user_agent, response_code, classification, points) 
             VALUES 
-            (%s, %s, %s, %s, %d, %s, %d)
+            (%s, %s, %s, %d, %s, %d)
             ",
-            $ip_address, $url, $method, $user_agent, $response_code, $classification, $points
+            $ip_address, $url, $user_agent, $response_code, $classification, $points
         );
 
         $wpdb->query($query);
@@ -79,6 +79,17 @@ class Database
         );
 
         $wpdb->query($query);
+    }
+
+    /**
+     * Get a list of all entries from the access log.
+     */
+    public static function get_bans()
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . self::$bans_table_name;
+        $bans = $wpdb->get_results("SELECT * FROM $table_name");
+        return $bans;
     }
 
     public static function remove_old_bans()
@@ -156,7 +167,6 @@ class Database
 			time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
             ip_address VARCHAR(32) NOT NULL,
             url VARCHAR(128) NOT NULL,
-            method VARCHAR(8) NOT NULL,
             user_agent VARCHAR(128) NOT NULL,
             response_code INT NOT NULL,
             classification VARCHAR(128),

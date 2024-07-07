@@ -4,19 +4,19 @@ namespace THM\Security;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-add_action('admin_menu', ['\THM\Security\Log', 'add_menu']);
+add_action('admin_menu', ['\THM\Security\AdminMenu', 'add_menu']);
 
 /**
- * Log module for the THM Security plugin.
+ * Admin Menu module for the THM Security plugin to display logs and bans in the admin_menu.
  */
-class Log
+class AdminMenu
 {
     /**
      * Adds a menu item to the tools menu.
      */
     public static function add_menu()
     {
-        add_management_page('THM Security', 'THM Security', 'manage_options', 'thm-security', ['\THM\Security\Log', 'render_management_page']);
+        add_management_page('THM Security', 'THM Security', 'manage_options', 'thm-security', ['\THM\Security\AdminMenu', 'render_management_page']);
     }
 
     /**
@@ -33,10 +33,10 @@ class Log
             <h1><?= esc_html(get_admin_page_title()) ?></h1>
             <nav class="nav-tab-wrapper">
                 <a href="?page=thm-security" class="nav-tab <?= empty($tab) ? 'nav-tab-active' : '' ?>">Access Log</a>
-                <a href="?page=thm-security&tab=page2" class="nav-tab <?= ($tab == 'page2') ? 'nav-tab-active' : '' ?>">Leere Seite</a>
+                <a href="?page=thm-security&tab=bans" class="nav-tab <?= ($tab == 'bans') ? 'nav-tab-active' : '' ?>">Bans</a>
             </nav>
             <?php if(empty($tab))    self::render_access_log(); ?>
-            <?php if($tab==='page2') self::render_empty_page(); ?>
+            <?php if($tab==='bans') self::render_bans(); ?>
         </div>
         <?php
     }
@@ -55,7 +55,6 @@ class Log
                     <th>Timestamp</th>
                     <th>IP</th>
                     <th>URL</th>
-                    <th>Method</th>
                     <th>User Agent</th>
                     <th>Response Code</th>
                     <th>Classification</th>
@@ -68,7 +67,6 @@ class Log
                         <td><?= esc_html($log->time) ?></td>
                         <td><?= esc_html($log->ip_address) ?></td>
                         <td><?= esc_html($log->url) ?></td>
-                        <td><?= esc_html($log->method) ?></td>
                         <td><?= esc_html($log->user_agent) ?></td>
                         <td><?= esc_html($log->response_code) ?></td>
                         <td><?= esc_html($log->classification) ?></td>
@@ -83,22 +81,30 @@ class Log
     /**
      * Renders the empty page tab on the management page.
      */
-    private static function render_empty_page()
+    private static function render_bans()
     {
-        ?>
-        <p>
-            Dies ist eine leere Seite.<br>
-            Sie können beliebig viele weitere Seiten hinzufügen.
-        </p>
-        <?php
-    }
+        $bans = Database::get_bans();
 
-    /**
-     * Logs any access to the website into the database.
-     */
-    public static function insert_log($ip, $url, $method, $user_agent, $response_code, $classification, $points)
-    {
-        Database::append_access_log($ip, $url, $method, $user_agent, $response_code, $classification, $points);
+        ?>
+        <table class="wp-list-table widefat fixed striped table-view-list">
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>Begin</th>
+                    <th>End</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($bans as $ban): ?>
+                    <tr>
+                        <td><?= esc_html($ban->ip_address) ?></td>
+                        <td><?= esc_html($ban->begin_time) ?></td>
+                        <td><?= esc_html($ban->end_time) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php
     }
 }
 

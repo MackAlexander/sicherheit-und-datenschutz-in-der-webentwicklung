@@ -1,10 +1,15 @@
 <?php
 
-function get($url)
+function get($url, $userAgent = null)
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HEADER, true);
+
+    if ($userAgent != null) {
+        curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
+    }
+
     $response = curl_exec($ch);
     $statuscode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
