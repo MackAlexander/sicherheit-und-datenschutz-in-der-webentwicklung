@@ -9,6 +9,7 @@ test_sql();
 test_installer_log();
 test_wp_scan();
 test_wpconfig();
+test_vulnerable_plugin();
 test_404();
 test_login_response();
 
@@ -44,6 +45,13 @@ function test_wpconfig()
 {
     echo "Accessing wp-config.\n";
     $url = "http://localhost/wp-config.php";
+    $response = get($url);
+}
+
+function test_vulnerable_plugin()
+{
+    echo "Accessing vulnerable plugin.\n";
+    $url = "http://localhost/wp-content/plugins/zingiri-web-shop/timthumb.php";
     $response = get($url);
 }
 

@@ -5,6 +5,7 @@ namespace THM\Security;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once(dirname(__FILE__) . '/config.php');
+require_once(dirname(__FILE__) . '/suspicious_links.php');
 
 /**
  * Classifier module for the THM Security plugin.
@@ -35,6 +36,17 @@ class Classifier
         {
             return $request_class = 'config-grabber';
         }
+        if (preg_match('/\/wp-content\/plugins\//i', $uri))
+        {
+            foreach(Suspicious::PLUGINS as $plugin)
+            {
+                if($plugin === $uri)
+                {
+                    return $request_class = 'suspicious_plugin';
+                }
+            }
+            
+        }
         if ($status_code === 404)
         {
             return $request_class = '404-not-found';
@@ -59,6 +71,8 @@ class Classifier
                 return Config::XMLRPC_POINTS;
             case "failed-login":
                 return Config::FAILED_LOGIN_POINTS;
+            case "suspicious_plugin":
+                return Config::SUSPICIOUS_PLUGIN_POINTS;
             case "404-not-found":
                 return Config::NOT_FOUND_POINTS;
         }

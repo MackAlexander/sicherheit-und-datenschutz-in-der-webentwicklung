@@ -21,6 +21,7 @@ class Config
     public const WP_SCAN_POINTS = 10;
     public const INSTALLER_LOG_POINTS = 10;
     public const CONFIG_GRAPPER_POINTS = 5;    
+    public const SUSPICIOUS_PLUGIN_POINTS = 5;
     public const NOT_FOUND_POINTS = 1;   
     public const FAILED_LOGIN_POINTS = 1;
 }
