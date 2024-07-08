@@ -75,58 +75,6 @@
 >    - ###### Kurz: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
 
 > [!IMPORTANT]
-> **📄 POST-Daten**
-> 
->    **1**. POST-Daten können Formularinhalte oder Login-Daten enthalten, die zur Authentifizierung und Verarbeitung der Benutzeranfragen benötigt werden.
-> 
->    **2**. Zur Verarbeitung von Formularen und Authentifizierungsanfragen werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Authentifizierung und Verarbeitung von Benutzeranfragen verwendet.
-> 
->    **4**. POST-Daten können personenbezogene Informationen enthalten, z.B. Formularinhalte oder Login-Daten.
-> 
->    - ###### Kurz: POST-Daten (Formulare, Login-Daten) werden für die Authentifizierung und Benutzeranfragen verarbeitet (möglicherweise personenbezogene Daten).
-
-> [!IMPORTANT]
-> **🌐 HTTP/1.1**
-> 
->    **1**. Das HTTP-Protokoll selbst enthält keine personenbezogenen Daten, wird aber zur Verarbeitung der Anfragen verwendet.
-> 
->    **2**. Zur Abwicklung der Kommunikation zwischen Server und Client werden diese Daten benötigt.
-> 
->    **3**. Diese Informationen werden zur Verwaltung der Kommunikation zwischen Server und Client genutzt.
-> 
->    **4**. Das HTTP-Protokoll enthält keine personenbezogenen Daten.
-> 
->    - ###### Kurz: Das HTTP-Protokoll selbst ist datenneutral, wird aber für die Verarbeitung von Anfragen verwendet, die personenbezogene Daten enthalten können.
-
-> [!IMPORTANT]
-> **🧵 Query-String**
-> 
->    **1**. Der Query-String kann Suchparameter oder Filterkriterien enthalten, die zur Verarbeitung und Beantwortung der Benutzeranfragen genutzt werden.
-> 
->    **2**. Zur Verarbeitung und Filterung von Suchanfragen und anderen Parametern werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Bearbeitung und Beantwortung von Benutzeranfragen verwendet.
-> 
->    **4**. Der Query-String kann personenbezogene Daten enthalten, z.B. Suchparameter oder Filterkriterien.
-> 
->    - ###### Kurz: Der Query-String (Suchparameter, Filterkriterien) wird zur Verarbeitung und Beantwortung von Anfragen genutzt und kann personenbezogene Daten enthalten.
-
-> [!IMPORTANT]
-> **🆔 User ID**
-> 
->    **1**. Wenn verfügbar, wird die User ID gesammelt, um Benutzeranfragen zuzuordnen und Benutzersitzungen zu verwalten.
-> 
->    **2**. Zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung genutzt.
-> 
->    **4**. Es handelt sich um personenbezogen Daten (DSGVO relevant).
-> 
->    - ###### Kurz: Das Plugin sammelt datenschutzrelevante Daten, um Benutzeranfragen zuzuordnen und zu verwalten, wobei es sich um personenbezogene Daten handelt.
-
-> [!IMPORTANT]
 > **🧑‍💻 User-Agent**
 > 
 >    **1**. Der User-Agent wird gesammelt, um das verwendete Gerät und den Browser zu identifizieren, was zur Verbesserung der Kompatibilität und Sicherheit der Anwendung beiträgt.
