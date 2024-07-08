@@ -8,14 +8,14 @@
 > [!NOTE] 
 > **🚀 Mehrwert**
 > 
-> Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von **Plugins** und **Themes** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
+> Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von den installierten **WordPress Plugins** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
 
 > [!NOTE] 
 > **🚧 Abgrenzung**
 > #### Dieses Plugin:
 > - ist nur für WordPress geeignet
 > - protokolliert nur bösartige Requests
-> - trackt nur Requests zum Schutz vor bekannten Wordpress Themes und Plugins mit Sicherheitslücken
+> - trackt nur Requests zum Schutz vor bekannten Wordpress Plugins mit Sicherheitslücken
 > - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
 > - ist **NICHT** für einen vollständigen Schutz vor Hackern geeignet
 
