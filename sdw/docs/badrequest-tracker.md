@@ -35,9 +35,9 @@
 > ### 🏆 Punktesystem
 >
 >    #### 📊 Punkteverteilung
->    - Je nach Menge der Rerquests
+>    - Je nach Menge der Requests
 >    #### ⚖️ Punktegewichtung
->    - Je nach Schwere des Rerquests
+>    - Je nach Schwere des Requests
 
 > [!IMPORTANT]
 >
