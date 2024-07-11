@@ -23,7 +23,6 @@
 >
 > ### ⛔ Nutzersperrungen
 >    #### 🚫 Sperrungen nach Anzahl bösartiger Requests
->    ##### Exponentielles Ansteigen nach Anzahl bösartiger Requests
 >    - Bösartige Requests werden getrackt und in einer Tabelle gespeichert. Das Punktesystem des Plugins wertet den Request aus. Nach einer gewissen bösartigen Anzahl von Requests wird der Nutzer gesperrt.
 >    #### 🗑️ Entsperrung nach Zeit
 >    ##### Löschen der ältesten Tabelleneinträge:
