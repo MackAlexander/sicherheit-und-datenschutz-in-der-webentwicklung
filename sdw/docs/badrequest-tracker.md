@@ -43,11 +43,6 @@
 >    - Je nach Menge der Rerquests
 >    #### ⚖️ Punktegewichtung
 >    - Je nach Schwere des Rerquests
->
->    #### 📈 Punkteanstieg
->    - Die Punkteverteilung erfolgt durch die durch das Plugin festgelegte Schwere des bösartigen Requests. Schere bösartige Requests speichern in der Tabelle mehr Punkte auf einmal, was dazu führt, dass der Nutzer den durchgeführten Request nur wenige Male versuchen kann, bis er gesperrt wird.
->    - **Exponentielles Ansteigen der Punkte nach Anzahl bösartiger Requests**
->    Wiederholte bösartige Requests geben exponentiell mehr Punkte, was zu einer schnelleren Sperrung des Nutzers führt.
 
 > [!IMPORTANT]
 >
