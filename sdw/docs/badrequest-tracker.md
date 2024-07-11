@@ -16,7 +16,6 @@
 >            - Löschen der ältesten Tabelleneinträge
 >    - **🏆 Punktesystem**
 >        - Punkteverteilung
->            - Exponentielles Ansteigen nach Anzahl bösartiger Requests
 >        - Punktegewichtung
 >    - **🗑️ Punktereset**
 
