@@ -8,14 +8,14 @@
 > [!NOTE] 
 > **🚀 Mehrwert**
 > 
-> Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von **Plugins** und **Themes** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
+> Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von den installierten **WordPress Plugins** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
 
 > [!NOTE] 
 > **🚧 Abgrenzung**
 > #### Dieses Plugin:
 > - ist nur für WordPress geeignet
 > - protokolliert nur bösartige Requests
-> - trackt nur Requests zum Schutz vor bekannten Wordpress Themes und Plugins mit Sicherheitslücken
+> - trackt nur Requests zum Schutz vor bekannten Wordpress Plugins mit Sicherheitslücken
 > - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
 > - ist **NICHT** für einen vollständigen Schutz vor Hackern geeignet
 
@@ -73,58 +73,6 @@
 >    **4**. Die URL kann personenbezogene Daten enthalten, z.B. Nutzernamen oder Profilinformationen.
 > 
 >    - ###### Kurz: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
-
-> [!IMPORTANT]
-> **📄 POST-Daten**
-> 
->    **1**. POST-Daten können Formularinhalte oder Login-Daten enthalten, die zur Authentifizierung und Verarbeitung der Benutzeranfragen benötigt werden.
-> 
->    **2**. Zur Verarbeitung von Formularen und Authentifizierungsanfragen werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Authentifizierung und Verarbeitung von Benutzeranfragen verwendet.
-> 
->    **4**. POST-Daten können personenbezogene Informationen enthalten, z.B. Formularinhalte oder Login-Daten.
-> 
->    - ###### Kurz: POST-Daten (Formulare, Login-Daten) werden für die Authentifizierung und Benutzeranfragen verarbeitet (möglicherweise personenbezogene Daten).
-
-> [!IMPORTANT]
-> **🌐 HTTP/1.1**
-> 
->    **1**. Das HTTP-Protokoll selbst enthält keine personenbezogenen Daten, wird aber zur Verarbeitung der Anfragen verwendet.
-> 
->    **2**. Zur Abwicklung der Kommunikation zwischen Server und Client werden diese Daten benötigt.
-> 
->    **3**. Diese Informationen werden zur Verwaltung der Kommunikation zwischen Server und Client genutzt.
-> 
->    **4**. Das HTTP-Protokoll enthält keine personenbezogenen Daten.
-> 
->    - ###### Kurz: Das HTTP-Protokoll selbst ist datenneutral, wird aber für die Verarbeitung von Anfragen verwendet, die personenbezogene Daten enthalten können.
-
-> [!IMPORTANT]
-> **🧵 Query-String**
-> 
->    **1**. Der Query-String kann Suchparameter oder Filterkriterien enthalten, die zur Verarbeitung und Beantwortung der Benutzeranfragen genutzt werden.
-> 
->    **2**. Zur Verarbeitung und Filterung von Suchanfragen und anderen Parametern werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Bearbeitung und Beantwortung von Benutzeranfragen verwendet.
-> 
->    **4**. Der Query-String kann personenbezogene Daten enthalten, z.B. Suchparameter oder Filterkriterien.
-> 
->    - ###### Kurz: Der Query-String (Suchparameter, Filterkriterien) wird zur Verarbeitung und Beantwortung von Anfragen genutzt und kann personenbezogene Daten enthalten.
-
-> [!IMPORTANT]
-> **🆔 User ID**
-> 
->    **1**. Wenn verfügbar, wird die User ID gesammelt, um Benutzeranfragen zuzuordnen und Benutzersitzungen zu verwalten.
-> 
->    **2**. Zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung werden diese Daten benötigt.
-> 
->    **3**. Diese Daten werden zur Verwaltung der Benutzersitzungen und Personalisierung der Benutzererfahrung genutzt.
-> 
->    **4**. Es handelt sich um personenbezogen Daten (DSGVO relevant).
-> 
->    - ###### Kurz: Das Plugin sammelt datenschutzrelevante Daten, um Benutzeranfragen zuzuordnen und zu verwalten, wobei es sich um personenbezogene Daten handelt.
 
 > [!IMPORTANT]
 > **🧑‍💻 User-Agent**
