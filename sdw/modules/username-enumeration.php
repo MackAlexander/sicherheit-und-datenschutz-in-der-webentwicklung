@@ -8,6 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once(dirname(__FILE__) . '/config.php');
 
+register_activation_hook('sdw/sdw.php', ['THM\Security\Username', 'update_all_users_nickname']);
+
 add_action('user_register', ['THM\Security\Username', 'user_register'], 10, 2);
 add_action('profile_update', ['THM\Security\Username', 'profile_update'], 10, 3);
 add_action('user_profile_update_errors', ['THM\Security\Username', 'user_profile_update_errors'], 10, 3);
@@ -28,6 +30,22 @@ add_filter('wp_sitemaps_add_provider', ['THM\Security\Username', 'wp_sitemaps_ad
  */
 class Username
 {
+    /**
+     * Sets a default nickname and display_name for all existing users when the plugin is activated if the current displayname is the login name. 
+     */
+    public static function update_all_users_nickname()
+    {
+        $users = get_users();
+
+        foreach ($users as $user) 
+        {
+            if($user->display_name === $user->user_login)
+            {
+                wp_update_user(array('ID' => $user->ID, 'nickname' => Config::DEFAULT_NAME, 'display_name' => Config::DEFAULT_NAME));
+            }
+        }
+    }
+
     /**
      * Sets a default nickname and display_name when a new user is created.
      */

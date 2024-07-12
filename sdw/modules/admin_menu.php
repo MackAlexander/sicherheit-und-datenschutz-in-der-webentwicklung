@@ -4,6 +4,8 @@ namespace THM\Security;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+require_once(dirname(__FILE__) . '/config.php');
+
 add_action('admin_menu', ['\THM\Security\AdminMenu', 'add_menu']);
 
 /**
@@ -46,7 +48,13 @@ class AdminMenu
      */
     private static function render_access_log()
     {
-        $logs = Database::get_access_log();
+        $logs_per_page = Config::LOGS_PER_PAGE; // Number of logs per page
+        $current_page = isset($_GET['paged']) ? max(1, intval($_GET['paged'])) : 1;
+        $offset = ($current_page - 1) * $logs_per_page;
+
+        $total_logs = Database::get_access_log_count();
+        $logs = Database::get_access_log($logs_per_page, $offset);
+        $total_pages = ceil($total_logs / $logs_per_page);
 
         ?>
         <table class="wp-list-table widefat fixed striped table-view-list">
@@ -76,6 +84,20 @@ class AdminMenu
             </tbody>
         </table>
         <?php
+
+        // Pagination links
+        if ($total_pages > 1) {
+            $page_links = paginate_links(array(
+                'base' => add_query_arg('paged', '%#%'),
+                'format' => '',
+                'prev_text' => __('&laquo;'),
+                'next_text' => __('&raquo;'),
+                'total' => $total_pages,
+                'current' => $current_page
+            ));
+
+            echo '<div class="tablenav"><div class="tablenav-pages">' . $page_links . '</div></div>';
+        }
     }
 
     /**

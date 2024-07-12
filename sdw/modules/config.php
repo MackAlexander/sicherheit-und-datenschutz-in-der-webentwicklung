@@ -12,6 +12,8 @@ class Config
 {
     public const DEFAULT_NAME = 'Anonymous'; 
 
+    public const LOGS_PER_PAGE = 10;
+
     public const BAN_DURATION = 7;
     public const CLEAN_DURATION = 30;
     public const MAX_POINTS = 50;

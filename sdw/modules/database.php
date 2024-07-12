@@ -23,12 +23,22 @@ class Database
     /**
      * Get a list of all entries from the access log.
      */
-    public static function get_access_log()
+    public static function get_access_log($limit, $offset)
     {
         global $wpdb;
         $table_name = $wpdb->prefix . self::$access_log_table_name;
-        $logs = $wpdb->get_results("SELECT * FROM $table_name");
+        $logs = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name ORDER BY time DESC LIMIT %d OFFSET %d", $limit, $offset));
         return $logs;
+    }
+
+    /**
+     * Returns the total amount of all access logs.
+     */
+    public static function get_access_log_count()
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . self::$access_log_table_name;
+        return $wpdb->get_var("SELECT COUNT(*) FROM $table_name");
     }
 
     /**

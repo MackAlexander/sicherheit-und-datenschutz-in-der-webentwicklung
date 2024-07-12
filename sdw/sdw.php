@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: SDW
-Description: Sicherheit und Datenschutz in der Webentwicklung - Kapitel 5
+Description: Wordpress Security Plugin
 Version: 1.0.0
-Author: Technische Hochschule Mittelhessen
+Author: Alexander Mack, Jonas Nickel
 Author URI: https://www.thm.de
 */
 
