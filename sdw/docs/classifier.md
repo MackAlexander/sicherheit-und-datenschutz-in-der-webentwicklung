@@ -1,35 +1,36 @@
-# username-enumeration
+# classifier.php
 
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul klassifiziert eingehende Anfragen und weist ihnen je nach Art der Anfrage Sicherheitsbewertungen Punkte zu.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+>    - **🔍 Anfrageklassifizierung**
+>        - Identifikation und Klassifikation von Anfragen
+         - Erkennung von spezifischen Bedrohungen
+>    - **📊 Punktebewertung**
+>        - Zuweisung von Punkten basierend auf der Klassifikation
 
 > [!IMPORTANT]
 >
+> ### 🔍 Anfrageklassifizierung
+>
+>    #### 🛡️ Identifikation und Klassifikation von Anfragen
+>    - Eingehende Anfragen werden analysiert und klassifiziert, um potenziell schädliche Aktivitäten zu erkennen.
+>    #### 🚩 Erkennung von spezifischen Bedrohungen
+>    - Bestimmte Muster und Inhalte in Anfragen (z.B. /xmlrpc.php, .sql, wp-scan User-Agent) werden erkannt und klassifiziert, um Sicherheitsrisiken zu identifizieren.
+
+> [!IMPORTANT]
+>
+> ### 📊 Punktebewertung
+>
+>    #### 🔢 Zuweisung von Punkten basierend auf der Klassifikation
+>    - Jede Klassifikation erhält eine spezifische Punktzahl, die die Schwere des potenziellen Risikos widerspiegelt (z.B. config-grabber, wp-scan, 404-not-found).
 
 
 > [!Note]
