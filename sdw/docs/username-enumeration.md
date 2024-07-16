@@ -10,22 +10,22 @@
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
+>    - **⚙️ Benutzerverwaltung**
 >        - Standard-Nickname und Anzeige-Name setzen
 >        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
+>    - **⛔ Deaktivierung von Autoren-Seiten**
 >        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
+>    - **⚠️ Backend-Warnungen**
 >        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
+>    - **💬 Anpassungen von Autoren- und Kommentar-Anzeigenamen**
 >        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
+>    - **🌐 URLs und Fehlermeldungen**
 >        - Autoren-URL deaktivieren
 >        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
+>    - **🛠️ REST-API und Embeds**
 >        - Benutzerendpunkte in der REST-API deaktivieren
 >        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
+>    - **🗺️ Sitemaps**
 >        - Benutzersitemaps deaktivieren    
 
 > [!IMPORTANT]
