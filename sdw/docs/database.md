@@ -1,4 +1,4 @@
-# database.php
+# database
 
 > [!TIP]
 > **🔍 Beschreibung**
