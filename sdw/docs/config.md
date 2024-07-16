@@ -1,36 +1,51 @@
-# username-enumeration
+# config
 
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul definiert verschiedene Konstanten zur Steuerung des Verhaltens und der Schwellenwerte für sicherheitsrelevante Aktionen innerhalb des Plugins. Diese Konstanten helfen bei der Verwaltung von Sicherheitsmaßnahmen wie Protokollierung, Sperrungen und Bewertungen verdächtiger Aktivitäten.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+> - **⚙️ Standardwerte**
+>   - Standardbenutzername für anonyme Nutzer
+>   - Anzahl der Protokolleinträge pro Seite
+> - **⛔ Sperrdauer und Punktesystem**
+>   - Dauer einer Nutzersperrung
+>   - Zeitraum zur Bereinigung alter Einträge
+>   - Maximale Punktzahl vor Sperrung
+>   - Datenbankzugriff
+>   - XML-RPC Zugriffe
+>   - WordPress Scan Ereignisse
+>   - Installer-Log Ereignisse
+>   - Konfigurations-Grabber Ereignisse
+>   - verdächtige Plugin Ereignisse
+>   - nicht gefundene Ressourcen
+>   - fehlgeschlagene Anmeldungen
 
 > [!IMPORTANT]
 >
+> ### ⚙️ Standardwerte
+>   - Standardbenutzername für anonyme Nutzer: `Anonymous`
+>   - Anzahl der Protokolleinträge pro Seite: `10`
 
+> [!IMPORTANT]
+>
+>    #### ⛔ Sperrdauer und Punktesystem
+>   - Dauer einer Nutzersperrung: `7` Tage
+>   - Zeitraum zur Bereinigung alter Einträge: `30` Tage
+>   - Maximale Punktzahl vor Sperrung: `50`
+>   - Punkte für Datenbankzugriff: `15`
+>   - Punkte für XML-RPC Zugriffe: `15`
+>   - Punkte für WordPress Scan Ereignisse: `10`
+>   - Punkte für Installer-Log Ereignisse: `10`
+>   - Punkte für Konfigurations-Grabber Ereignisse: `5`
+>   - Punkte für verdächtige Plugin Ereignisse: `5`
+>   - Punkte für nicht gefundene Ressourcen: `1`
+>   - Punkte für fehlgeschlagene Anmeldungen: `1`
 
 > [!Note]
 > **🧩 Links zu den Modulen**
