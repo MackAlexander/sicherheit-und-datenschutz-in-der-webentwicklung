@@ -3,7 +3,7 @@
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Modul definiert verschiedene Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen innerhalb des Plugins. Diese Konstanten helfen bei der Verwaltung von Sicherheitsmaßnahmen wie Protokollierung, Sperrungen und Bewertungen verdächtiger Aktivitäten.
+> Dieses Modul definiert verschiedene Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der Punktevergabe für das Punktesystem. Diese Konstanten helfen bei der Verwaltung von Sicherheitsmaßnahmen wie Protokollierung, Sperrungen und Bewertungen verdächtiger Aktivitäten.
 
 ## Funktionen
 
