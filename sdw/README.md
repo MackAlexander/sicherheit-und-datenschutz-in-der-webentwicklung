@@ -9,10 +9,9 @@
 >
 > **📚 Inhalt**
 >    - **🚀 Mehrwert**
->        - mz
+>        - 
 >    - **🚧 Abgrenzung**
->        - Anzeige von Zugriffsprotokollen
->        - Paginierung der Protokolle
+>        - 
 >    - **🔒 Datenschutzinformationen**
 >        - IP-Adressen
 >        - Zeit der Anfrage
@@ -25,9 +24,9 @@
 >        - Was passiert danach mit den Daten?
 >        - Datenschutzerklärung
 >    - **📦 Installation**
->        - Anzeige von Sperrungen
+>        - 
 >    - **💡 Hinweise**
->        - Anzeige von Sperrungen
+>        - 
 >    - **🔒 Technische Details**
 >        - Tabellen in der Datenbank
 >        - Hooks und Filter
