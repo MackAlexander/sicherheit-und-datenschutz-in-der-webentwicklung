@@ -59,8 +59,6 @@
 > 
 >    🔗[classifier.md](classifier.md)
 > 
->    🔗[config.md](config.md)
-> 
 >    🔗[cron.md](cron.md)
 > 
 >    🔗[database.md](database.md)
