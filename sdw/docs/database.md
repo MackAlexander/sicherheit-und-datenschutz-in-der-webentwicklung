@@ -1,36 +1,44 @@
-# username-enumeration
+# database.php
 
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul verwaltet Datenbankoperationen, einschließlich der Protokollierung von Zugriffen und der Verwaltung von IP-Sperren.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+>    - **🔍 Zugriffprotokollierung**
+>        - Protokollierung und Verwaltung von Zugriffen
+>    - **⛔ IP-Sperrverwaltung**
+>        - Hinzufügen und Verwalten von IP-Sperren
+>    - **🔧 Installation und Deaktivierung**
+>        - Initialisierung und Deinstallation der Datenbanktabellen
 
 > [!IMPORTANT]
 >
+> ### 🔍 Zugriffprotokollierung
+>
+>    #### 🛡️ Protokollierung und Verwaltung von Zugriffen
+>    - Speichern von Zugriffsversuchen in der Datenbank.
+>    - Abfrage und Entfernung alter Protokolle.
 
+> [!IMPORTANT]
+>
+> ### ⛔ IP-Sperrverwaltung
+>
+>    #### 🚫 Hinzufügen und Verwalten von IP-Sperren
+>    - Speichern von IP-Adressen, die gesperrt werden sollen.
+>    - Überprüfung, ob eine IP-Adresse gesperrt ist.
+
+> [!IMPORTANT]
+>
+> ### 🔧 Installation und Deaktivierung
+>
+>    #### 🛠️ Initialisierung und Deinstallation der Datenbanktabellen
+>    - Erstellen und Entfernen von Datenbanktabellen bei Aktivierung oder Deaktivierung des Plugins.
 
 > [!Note]
 > **🧩 Links zu den Modulen**
