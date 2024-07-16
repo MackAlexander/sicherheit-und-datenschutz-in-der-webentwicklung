@@ -3,7 +3,7 @@
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul fügt ein Admin-Menü hinzu, mit dem Sie Protokolle und Sperrungen im Admin-Bereich Ihrer WordPress-Website anzeigen können.
 
 ## Funktionen
 
