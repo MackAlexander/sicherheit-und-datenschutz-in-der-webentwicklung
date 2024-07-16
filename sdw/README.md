@@ -13,24 +13,15 @@
 >    - **🚧 Abgrenzung**
 >        - 
 >    - **🔒 Datenschutzinformationen**
->        - IP-Adressen
->        - Zeit der Anfrage
->        - URL der Anfrage
->        - User-Agent
->        - Anfragen
->        - Warum braucht es diese Daten?
->        - Was macht das Plugin mit diesen Daten?
->        - Wie lange werden die Daten gespeichert?
->        - Was passiert danach mit den Daten?
->        - Datenschutzerklärung
+>        - 
 >    - **📦 Installation**
 >        - 
 >    - **💡 Hinweise**
 >        - 
 >    - **🔒 Technische Details**
->        - Tabellen in der Datenbank
->        - Hooks und Filter
+>        - 
 >    - **🧩 Links zu den Modulen**
+>        - 
 
 > [!NOTE] 
 > **🚀 Mehrwert**
