@@ -3,7 +3,7 @@
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Modul verbessert die Sicherheit der Website, indem es Benutzernamen gezielt blockiert, ausblendet oder austauscht. Es schränkt bestimmte Funktionen ein, die potenzielle Sicherheitslücken darstellen könnten und stellt sicher, dass Benutzernamen nicht als sensible Informationen offenbart werden und verhindert, dass Benutzer ihre Anmeldenamen für sichtbare oder durchsuchbare Bereiche der Website verwenden.
+> Dieses Modul verbessert die Sicherheit der Website, indem es Benutzernamen gezielt blockiert, ausblendet oder austauscht. Es schränkt bestimmte Funktionen ein, die potenzielle Sicherheitslücken darstellen könnten.
 
 ## Funktionen
 
