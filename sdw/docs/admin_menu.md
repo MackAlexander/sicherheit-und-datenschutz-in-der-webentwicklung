@@ -10,26 +10,40 @@
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+>    - **🔧 Admin-Menü**
+>        - Hinzufügen eines Menüeintrags zu den Werkzeugen
+>        - Verwaltung der Protokolle und Sperrungen
+>    - **📜 Protokolle**
+>        - Anzeige von Zugriffsprotokollen
+>        - Paginierung der Protokolle
+>    - **⛔ Sperrungen**
+>        - Anzeige von Sperrungen
+
 
 > [!IMPORTANT]
 >
+> ### 🔧 Admin-Menü
+>
+>    #### ➕ Hinzufügen eines Menüeintrags zu den Werkzeugen
+>    - Das Modul fügt einen neuen Eintrag "THM Security" zu den Verwaltungstools hinzu, der es Administratoren ermöglicht, auf die Protokoll- und Sperrungsseiten zuzugreifen.
+>    #### 🛠 Verwaltung der Protokolle und Sperrungen
+>    - Im Menü können Sie zwischen Zugriffsprotokollen und Sperrungen wechseln und diese verwalten.
+
+> [!IMPORTANT]
+>
+> ### 📜 Protokolle
+>
+>    #### 📝 Anzeige von Zugriffsprotokollen
+>    - Die Zugriffsprotokolle werden in einer Tabelle angezeigt, die Informationen wie Zeitstempel, IP-Adresse, URL, User-Agent, Antwortcode, Klassifikation und Punkte enthält.zuzugreifen.
+>    #### 🔄 Paginierung der Protokolle
+>    - Die Protokolle sind paginiert, um eine übersichtliche Darstellung und einfache Navigation zu gewährleisten.
+
+> [!IMPORTANT]
+>
+> ### ⛔ Sperrungen
+>
+>    #### 🚫 Anzeige von Sperrungen
+>    - Die Sperrungstab zeigt alle gesperrten IP-Adressen an, einschließlich des Beginns und Endes der Sperrung. Punkte enthält.zuzugreifen.
 
 
 > [!Note]
