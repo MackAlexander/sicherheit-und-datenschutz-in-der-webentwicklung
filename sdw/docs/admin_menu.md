@@ -1,4 +1,4 @@
-# admin_menu.php
+# admin_menu
 
 > [!TIP]
 > **🔍 Beschreibung**
