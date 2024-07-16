@@ -1,4 +1,4 @@
-# classifier.php
+# classifier
 
 > [!TIP]
 > **🔍 Beschreibung**
