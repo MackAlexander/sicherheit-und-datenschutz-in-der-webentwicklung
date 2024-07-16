@@ -3,7 +3,7 @@
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul überwacht HTTP-Anfragen in Echtzeit, klassifiziert sie auf ihre Sicherheitsrelevanz hin und ergreift entsprechende Maßnahmen, wie z.B. das Blockieren von IP-Adressen bei verdächtigem Verhalten oder das Protokollieren fehlgeschlagener Login-Versuche. Dieses Modul ist entscheidend für die Sicherheitsstrategie der Website und hilft dabei, potenzielle Bedrohungen frühzeitig zu erkennen und zu bekämpfen.
 
 ## Funktionen
 
