@@ -1,4 +1,4 @@
-# cron.php
+# cron
 > [!TIP]
 > **🔍 Beschreibung**
 > 
