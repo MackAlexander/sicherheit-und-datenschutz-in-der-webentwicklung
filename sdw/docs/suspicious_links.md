@@ -1,36 +1,24 @@
-# username-enumeration
+# suspicious_links.php
 
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul identifiziert und listet verdächtige Links und Dateien innerhalb des WordPress-Plugins-Verzeichnisses, die Sicherheitsrisiken darstellen können.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+>    - **🛡️ Verdächtige Links**
+>        - Liste potenziell unsicherer Dateien in verschiedenen Plugins
 
 > [!IMPORTANT]
 >
-
+> ### 🛡️ Verdächtige Links
+>
+>    #### 🔗 Liste potenziell unsicherer Dateien
+>    - Enthält Pfade zu Dateien, die als Sicherheitslücken bekannt sind, die für Angriffe anfällig sein können.
 
 > [!Note]
 > **🧩 Links zu den Modulen**
