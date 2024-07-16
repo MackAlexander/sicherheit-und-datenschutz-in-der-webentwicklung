@@ -1,4 +1,4 @@
-# suspicious_links.php
+# suspicious_links
 
 > [!TIP]
 > **🔍 Beschreibung**
