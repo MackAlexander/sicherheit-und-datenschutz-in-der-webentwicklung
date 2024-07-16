@@ -35,7 +35,7 @@
 
 > [!IMPORTANT]
 >
->    #### ⛔ Sperrdauer und Punktesystem
+> ### ⛔ Sperrdauer und Punktesystem
 >   - Dauer einer Nutzersperrung: `7` Tage
 >   - Zeitraum zur Bereinigung alter Einträge: `30` Tage
 >   - Maximale Punktzahl vor Sperrung: `50`
