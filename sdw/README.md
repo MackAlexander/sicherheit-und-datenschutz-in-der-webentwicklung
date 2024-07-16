@@ -154,6 +154,18 @@
 > [!Note]
 > **🧩 Links zu den Modulen**
 >
->    🔗[username-enumeration.md](docs/username-enumeration.md)
+>    🔗[admin_menu.md](docs/admin_menu.md)
 > 
 >    🔗[badrequest-tracker.md](docs/badrequest-tracker.md)
+> 
+>    🔗[classifier.md](docs/classifier.md)
+> 
+>    🔗[config.md](docs/config.md)
+> 
+>    🔗[cron.md](docs/cron.md)
+> 
+>    🔗[database.md](docs/database.md)
+> 
+>    🔗[suspicious_links.md](docs/suspicious_links.md)
+> 
+>    🔗[username-enumeration.md](docs/username-enumeration.md)
