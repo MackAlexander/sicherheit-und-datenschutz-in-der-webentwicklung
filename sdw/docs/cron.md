@@ -1,36 +1,33 @@
-# username-enumeration
-
+# cron.php
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Benutzernamen in öffentlichen Bereichen verbirgt und unerwünschte Anfragen überwacht und blockiert. Dies schützt Ihre Website vor Brute-Force-Angriffen und anderen potenziellen Sicherheitsrisiken.
+> Dieses Modul verwaltet die Cron-Jobs, die regelmäßige Wartungsaufgaben wie das Entfernen alter Einträge durchführen.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **Benutzerverwaltung**
->        - Standard-Nickname und Anzeige-Name setzen
->        - Anzeige-Name darf nicht dem Login-Namen entsprechen
->    - **Deaktivierung von Autoren-Seiten**
->        - Autoren-Seiten deaktivieren
->    - **Backend-Warnungen**
->        - Warnung im Admin-Bereich
->    - **Anpassungen von Autoren- und Kommentar-Anzeigenamen**
->        - Autorenname im RSS-Feed und Blog-Posts anpassen
->    - **URLs und Fehlermeldungen**
->        - Autoren-URL deaktivieren
->        - Generische Fehlermeldungen bei Login-Fehlern
->    - **REST-API und Embeds**
->        - Benutzerendpunkte in der REST-API deaktivieren
->        - Autorinformationen aus Embeds entfernen
->    - **Sitemaps**
->        - Benutzersitemaps deaktivieren    
+>    - **⏲️ Geplante Aufgaben**
+>        - Planung und Verwaltung täglicher Aufgaben
+>    - **🧹 Entfernen alter Einträge**
+>        - Löschen von Zugriffprotokollen und Sperren, die älter als eine bestimmte Anzahl von Tagen sind
 
 > [!IMPORTANT]
 >
+> ### ⏲️ Geplante Aufgaben
+>
+>    #### 🗓️ Planung und Verwaltung täglicher Aufgaben
+>    - Einrichtung von Cron-Jobs bei Aktivierung des Plugins.
+>    - Entfernen von Cron-Jobs bei Deaktivierung des Plugins.
 
+> [!IMPORTANT]
+>
+> ### 🧹 Entfernen alter Einträge
+>
+>    #### 🧽 Löschen von Zugriffprotokollen und Sperren
+>    - Regelmäßige Bereinigung alter Zugriffprotokolle und Sperren.
 
 > [!Note]
 > **🧩 Links zu den Modulen**
