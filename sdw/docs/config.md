@@ -17,6 +17,7 @@
 >   - Dauer einer Nutzersperrung
 >   - Zeitraum zur Bereinigung alter Einträge
 >   - Maximale Punktzahl vor Sperrung
+> - **📊 Punkteverteilung mit unterschiedlicher Pnktzahl für**
 >   - Datenbankzugriff
 >   - XML-RPC Zugriffe
 >   - WordPress Scan Ereignisse
