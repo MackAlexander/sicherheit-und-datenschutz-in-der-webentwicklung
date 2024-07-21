@@ -1,68 +1,30 @@
-# config
+# Beschreibung
+Dieses Modul dient als generelle Konfigurationsdatei des Plugins. Es definiert Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der vergebenen Punkte für verschiedene bösartigen Anfragen.
 
-> [!TIP]
-> **🔍 Beschreibung**
-> 
-> Dieses Modul definiert verschiedene Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der Punktevergabe für das Punktesystem. Diese Konstanten helfen bei der Verwaltung von Sicherheitsmaßnahmen wie Protokollierung, Sperrungen und Bewertungen verdächtiger Aktivitäten.
+# Konstanten
+| Name | Beschreibung | Standardwert |
+|---|---|---|
+| `DEFAULT_NAME` | Der Standardname, der verwendet wird, um den Loginnamen der Benutzer zu verschleiern, wenn diese keinen eigenen Nicknamen setzen. | `Anonymous` |
+| `LOGS_PER_PAGE` | Die maximale Anzahl der Protokolleinträge, die pro Seite im [admin-menu](admin-menu.md) angezeigt werden. | 10 |
+| `BAN_DURATION` | Die Dauer in Tagen, für die ein Benutzer gesperrt wird. | 7 |
+| `CLEAN_DURATION` | Die Dauer in Tagen, nach der Protokolleinträge bereinigt werden. | 30 |
+| `MAX_POINTS` | Die maximale Anzahl der Punkte, die ein Benutzer haben kann, bevor eine Sperrung erfolgt. | 50 |
+| `DATABASE_ACCESS_POINTS` | Punkte, die für Zugriffe auf die Datenbank vergeben werden. | 15 |
+| `XMLRPC_POINTS` | Punkte, die für XML-RPC-Vorgänge vergeben werden. | 15 |
+| `WP_SCAN_POINTS` | Punkte, die für WP-Scan als "User Agent" vergeben werden. | 10 |
+| `INSTALLER_LOG_POINTS` | Punkte, die für Zugriffe auf Installationsprotokolle vergeben werden. | 10 |
+| `CONFIG_GRAPPER_POINTS` | Punkte, die für Zugriffe auf  Konfigurationssammlungen vergeben werden. | 5 |
+| `SUSPICIOUS_PLUGIN_POINTS` | Punkte, die für Zugriffe auf verdächtige Plugins vergeben werden. | 5 |
+| `NOT_FOUND_POINTS` | Punkte, die für Zugriffe auf nicht gefundene Seiten vergeben werden. | 1 |
+| `FAILED_LOGIN_POINTS` | Punkte, die für fehlgeschlagene Anmeldeversuche vergeben werden. | 1 |
 
-## Funktionen
 
-> [!WARNING]
->
-> **📚 Inhalt**
-> - **⚙️ Standardwerte**
->   - Standardbenutzername für anonyme Nutzer
->   - Anzahl der Protokolleinträge pro Seite
-> - **⛔ Sperrdauer und Punktesystem**
->   - Dauer einer Nutzersperrung
->   - Zeitraum zur Bereinigung alter Einträge
->   - Maximale Punktzahl vor Sperrung
-> - **📊 Punkteverteilung mit unterschiedlicher Pnktzahl für**
->   - Datenbankzugriff
->   - XML-RPC Zugriffe
->   - WordPress Scan Ereignisse
->   - Installer-Log Ereignisse
->   - Konfigurations-Grabber Ereignisse
->   - verdächtige Plugin Ereignisse
->   - nicht gefundene Ressourcen
->   - fehlgeschlagene Anmeldungen
-
-> [!IMPORTANT]
->
-> ### ⚙️ Standardwerte
->   - Standardbenutzername für anonyme Nutzer: `Anonymous`
->   - Anzahl der Protokolleinträge pro Seite: `10`
-
-> [!IMPORTANT]
->
-> ### ⛔ Sperrdauer und Punktesystem
->   - Dauer einer Nutzersperrung: `7` Tage
->   - Zeitraum zur Bereinigung alter Einträge: `30` Tage
->   - Maximale Punktzahl vor Sperrung: `50`
->   - Punkte für Datenbankzugriff: `15`
->   - Punkte für XML-RPC Zugriffe: `15`
->   - Punkte für WordPress Scan Ereignisse: `10`
->   - Punkte für Installer-Log Ereignisse: `10`
->   - Punkte für Konfigurations-Grabber Ereignisse: `5`
->   - Punkte für verdächtige Plugin Ereignisse: `5`
->   - Punkte für nicht gefundene Ressourcen: `1`
->   - Punkte für fehlgeschlagene Anmeldungen: `1`
-
-> [!Note]
-> **🧩 Links zu den Modulen**
->
->    🔗[README.md](../README.md)
-> 
->    🔗[admin_menu.md](admin_menu.md)
-> 
->    🔗[badrequest-tracker.md](badrequest-tracker.md)
-> 
->    🔗[classifier.md](classifier.md)
-> 
->    🔗[cron.md](cron.md)
-> 
->    🔗[database.md](database.md)
-> 
->    🔗[suspicious_links.md](suspicious_links.md)
-> 
->    🔗[username-enumeration.md](username-enumeration.md)
+# 🔗 Links zu den anderen Modulen
+- [README.md](../README.md)
+- [admin-menu.md](admin-menu.md)
+- [badrequest-tracker.md](badrequest-tracker.md)
+- [classifier.md](classifier.md)
+- [config.md](config.md)
+- [database.md](database.md)
+- [suspicious-links.md](suspicious-links.md)
+- [username-enumeration.md](username-enumeration.md)
