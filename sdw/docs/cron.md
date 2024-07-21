@@ -2,32 +2,49 @@
 > [!TIP]
 > **🔍 Beschreibung**
 > 
-> Dieses Modul verwaltet die Cron-Jobs, die regelmäßige Wartungsaufgaben wie das Entfernen alter Einträge durchführen.
+> Dieses Modul verwaltet den täglichen Cron-Job zur Bereinigung alter Zugriffprotokolle und Sperrungen.
 
 ## Funktionen
 
 > [!WARNING]
 >
 > **📚 Inhalt**
->    - **⏲️ Geplante Aufgaben**
->        - Planung und Verwaltung täglicher Aufgaben
->    - **🧹 Entfernen alter Einträge**
->        - Löschen von Zugriffprotokollen und Sperren, die älter als eine bestimmte Anzahl von Tagen sind
+>    - **⏲️ schedule_daily_task()**
+>        - Einplanung des täglichen Cron-Jobs.
+>    - **⏲️ clear_scheduled_task()**
+>        - Entfernen des eingeplanten Cron-Jobs.
+>    - **🧹 remove_old_entries()**
+>        - Löschen von Zugriffprotokollen und Sperren, die älter als eine bestimmte Anzahl von Tagen sind.
 
 > [!IMPORTANT]
 >
-> ### ⏲️ Geplante Aufgaben
+> ### ⏲️ schedule_daily_task()
 >
->    #### 🗓️ Planung und Verwaltung täglicher Aufgaben
->    - Einrichtung von Cron-Jobs bei Aktivierung des Plugins.
->    - Entfernen von Cron-Jobs bei Deaktivierung des Plugins.
+>    #### Verwendete Wordpress Hooks/Funktionen
+>    - register_activation_hook
+>    - wp_next_scheduled
+>
+> Wird ausgeführt, sobald das Plugin aktiviert wird. Es wird zunächst geprüft, ob bereits ein täglicher Cron-Job mit dem Namen `remove_old_entries` existiert. Ist dies nicht der Fall, wird der Hook `remove_old_entries` eingefügt, der einmal täglich aufgerufen wird.
+
+> [!IMPORTANT]
+>
+> ### ⏲️ clear_scheduled_task()
+>
+>    #### Verwendete Wordpress Hooks/Funktionen
+>    - register_deactivation_hook
+>    - wp_next_scheduled
+>    - wp_unschedule_event
+>
+> Wird ausgeführt, sobald das Plugin deaktiviert wird. Der zuvor erstelle Cron-Job wird dann entfernt.
 
 > [!IMPORTANT]
 >
 > ### 🧹 Entfernen alter Einträge
 >
->    #### 🧽 Löschen von Zugriffprotokollen und Sperren
->    - Regelmäßige Bereinigung alter Zugriffprotokolle und Sperren.
+>    #### Verwendete Wordpress Hooks/Funktionen
+>    - remove_old_entries
+>
+> Wird jede 24 Stunden ausgeführt. Ruft die Funktionen `remove_old_logs($days)` und `remove_old_bans()` des [database](database.md) Moduls auf. Die übergebenen Tage werden dabei dem [config](config.md) Modul entnommen.
 
 > [!Note]
 > **🧩 Links zu den Modulen**
