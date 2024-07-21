@@ -24,7 +24,7 @@ Dieses Modul dient als generelle Konfigurationsdatei des Plugins. Es definiert K
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
-- [config.md](config.md)
+- [cron.md](cron.md)
 - [database.md](database.md)
 - [suspicious-links.md](suspicious-links.md)
 - [username-enumeration.md](username-enumeration.md)
