@@ -29,7 +29,7 @@ Dieses Modul verwaltet den täglichen Cron-Job zur Bereinigung alter Zugriffprot
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
-- [cron.md](cron.md)
+- [config.md](config.md)
 - [database.md](database.md)
 - [suspicious-links.md](suspicious-links.md)
 - [username-enumeration.md](username-enumeration.md)
