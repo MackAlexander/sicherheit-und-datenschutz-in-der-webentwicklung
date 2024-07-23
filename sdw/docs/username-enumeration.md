@@ -5,8 +5,13 @@ Dieses Modul verbessert die Sicherheit der Website, indem es Benutzernamen gezie
 > ## `Benutzerverwaltung`
 >    #### Standard-Nickname und Anzeige-Name setzen
 >    ##### Funktionsweise:
->    Beim Erstellen eines neuen Benutzers wird durch die Funktion user_register der Nickname und der Anzeige-Name des neuen Benutzers auf "Anonymous" gesetzt. Dies wird durch den Hook user_register erreicht, der die Funktion THM\Security\Username::user_register aufruft.
->
+>    Beim Erstellen eines neuen Benutzers wird durch die Funktion user_register der Nickname und der Anzeige-Name des neuen Benutzers auf "Anonymous" gesetzt. Dies wird durch den Hook user_register erreicht, der die Funktion THM\Security\Username::user_register aufruft: [Bild](https://i.postimg.cc/Y0FB408t/image.png)
+>   ![Bild](https://i.postimg.cc/Y0FB408t/image.png)
+> 
+> Wenn Sie dennoch versuchen, Ihren Benutzernamen zu ändern, erhalten Sie eine Fehlermeldung, dass dies nicht erlaubt ist: [Bild](https://i.postimg.cc/5ydkR3qM/image.png)
+> 
+>   ![Bild](https://i.postimg.cc/5ydkR3qM/image.png)
+> 
 >    ##### Standard-Nickname und Anzeige-Name setzen: Beim Erstellen eines neuen Benutzers wird der Nickname und der Anzeige-Name auf "Anonymous" gesetzt.
 >
 >    ```` codadd_action('user_register', ['THM\Security\Username', 'user_register'], 10, 2); ````
@@ -45,6 +50,14 @@ Dieses Modul verbessert die Sicherheit der Website, indem es Benutzernamen gezie
 >    - Wenn dies der Fall ist, wird eine HTML-Benachrichtigung mit einer Warnmeldung und einem Link zur Profilseite des Benutzers ausgegeben.
 
 > ### Anpassungen von Autoren- und Kommentar-Anzeigenamen
+>
+> Nutzer ohne Nicknamen werden anonymisiert und Links werden entfernt: [Bild](https://i.postimg.cc/9fD8XSLh/image-2024-07-23-22-39-45.png)
+>
+> ![Bild](https://i.postimg.cc/9fD8XSLh/image-2024-07-23-22-39-45.png)
+>
+> Im Vergleich ein Nutzer mit Nickname und ein Nutzer ohne Nickname: [Bild](https://i.postimg.cc/GmhgV9Y9/image.png)
+>
+> ![Bild](https://i.postimg.cc/GmhgV9Y9/image.png)
 >
 >    #### Autorenname im RSS-Feed und Blog-Posts anpassen: Benutzernamen werden durch "Anonymous" ersetzt.
 >
