@@ -1,10 +1,16 @@
-# Beschreibung
+# suspicious-links
+
+## Abhängigkeiten zu anderen Modulen
+- Keine
+
+
+## Beschreibung
 Dieses Modul beinhaltet Konstanten, die verdächtige Links und Dateien mit bekannten Sicherheitslücken auflisten.
 
-# Plugins
+## Plugins
 Die Konstante `PLUGINS` enthält eine Sammlung an Links zu Plugin Dateien mit bekannten Sicherheitslücken.
 
-# 🔗 Links zu den anderen Modulen
+## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
