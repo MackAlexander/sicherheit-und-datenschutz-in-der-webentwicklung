@@ -1,6 +1,6 @@
 # config
 
-## Abhängigkeiten zu anderen Modulen
+## Abhängigkeiten
 - Keine
 
 ## Beschreibung
