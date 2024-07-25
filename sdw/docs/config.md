@@ -1,7 +1,12 @@
-# Beschreibung
+# config
+
+## Abhängigkeiten zu anderen Modulen
+- Keine
+
+## Beschreibung
 Dieses Modul dient als zentrale Konfigurationsdatei des Plugins. Es definiert Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der vergebenen Punkte für verschiedene bösartigen Anfragen.
 
-# Konstanten
+## Konstanten
 | Name | Beschreibung | Standardwert |
 |---|---|---|
 | `DEFAULT_NAME` | Der Standardname, der verwendet wird, um den Loginnamen der Benutzer zu verschleiern, wenn diese keinen eigenen Nicknamen setzen. | `Anonymous` |
@@ -19,7 +24,7 @@ Dieses Modul dient als zentrale Konfigurationsdatei des Plugins. Es definiert Ko
 | `FAILED_LOGIN_POINTS` | Punkte, die für fehlgeschlagene Anmeldeversuche vergeben werden. | 1 |
 
 
-# 🔗 Links zu den anderen Modulen
+## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
