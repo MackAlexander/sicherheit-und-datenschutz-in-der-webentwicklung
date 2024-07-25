@@ -18,70 +18,70 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > **Achtung:** Werden Änderungen an der Struktur der beiden Tabellen vorgenommen, muss die Version der entsprechenden Tabelle um einen ganzzahligen Wert erhöht werden.
 
 ## Funktionen
-> ### `get_access_log($limit, $offset)`
+> ### `🔓get_access_log($limit, $offset)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_access_log()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
 > Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `sdw_security_access_log` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
 
 
-> ### `get_access_log_count()`
+> ### `🔓get_access_log_count()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_access_log()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
 > Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `sdw_security_access_log` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
 
 
-> ### `get_bans($limit, $offset)`
+> ### `⛔get_bans($limit, $offset)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_bans()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
 > Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `sdw_security_bans` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
 
 
-> ### `get_bans_count()`
+> ### `⛔get_bans_count()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_bans()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
 > Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `sdw_security_bans` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
 
 
-> ### `append_access_log($ip_address, $url, $user_agent, $response_code, $classification, $points)`
+> ### `📋append_access_log($ip_address, $url, $user_agent, $response_code, $classification, $points)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
 > Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `sdw_security_access_log` eingefügt. 
 
 
-> ### `ban_ip($ip_address, $duration)`
+> ### `🚫ban_ip($ip_address, $duration)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
 > Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `sdw_security_bans` eingefügt. Der Beginn der Sperrung wird dabei über die SQL Funktion `NOW()` berechnet und das Ende der Sperre über die SQL Funktion `DATE_ADD(NOW(), INTERVAL %d DAY)` und der übergebenen `$duration` berechnet.
 
 
-> ### `get_total_points($ip_address)`
+> ### `📈get_total_points($ip_address)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
 > Aus der Tabelle `sdw_security_access_log` werden mittels `$wpdb->prepare`, `$wpdb->get_var, `SELECT SUM(points)` die summierten Punkte der übergebenen `$ip_address` zurückgegeben. 
 
 
-> ### `remove_old_logs($days)`
+> ### `🗑️remove_old_logs($days)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `remove_old_entries()` des [cron](cron.md) Moduls
 > 
 > **Beschreibung:**
 > Mittels `DELETE`, `$wpdb->prepare` und `$wpdb->query` werden alle Einträge der `sdw_security_access_log` Tabelle gelöscht, die älter als die übergebenen `$days` sind. Die Brechnung des exakten Datums erfolgt dabei über die Abfrage `WHERE time < NOW() - INTERVAL %d DAY` und den übergebenen `$days`.
 
 
-> ### `remove_old_bans()`
+> ### `🗑️remove_old_bans()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `remove_old_entries()` des [cron](cron.md) Moduls
 > 
 > **Beschreibung:**
 > Mittels `DELETE` und `$wpdb->query` werden alle Einträge der `sdw_security_bans` Tabelle gelöscht, bei denen das Ende der Sperrung älter ist, als der jetzige Zeitpunkt. Die Brechnung erfolgt dabei über die Abfrage `WHERE end_time < NOW()`.
 
 
-> ### `is_ip_blocked($ip_address)`
+> ### `🔎is_ip_blocked($ip_address)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `check_ip_adress()` und `shutdown()` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
@@ -90,7 +90,7 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > Es wird nicht nur geprüft, ob es einen Eintrag in der Tabelle gibt, sondern auch das `end_time` Feld betrachtet. Da der Cron-Job zur Bereinigung der Tabellen nur einmal täglich läuft, wird so gewährleistet, dass Zugriffe auf die Seite wieder möglich sind, sobald eine Sperrung abgelaufen ist.
 
 
-> ### `activate()`
+> ### `✔️activate()`
 > **Ausführendes Ereignis:** [plugins_loaded](https://developer.wordpress.org/reference/hooks/plugins_loaded/) und [register_activation_hook](https://developer.wordpress.org/reference/functions/register_activation_hook/)
 > 
 > **Beschreibung:**
@@ -99,7 +99,7 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > Selbiges wird ebenfalls mit dem Tabellennamen `$bans_table_name` und der Version in `$bans_version` durchgeführt und entsprechend die Funktion `install_bans_table()` aufgerufen, sollten Unterschiede festgestellt werden.
 
 
-> ### `deactivate()`
+> ### `❌deactivate()`
 > **Ausführendes Ereignis:** [register_deactivation_hook](https://developer.wordpress.org/reference/functions/register_deactivation_hook/)
 > 
 > **Beschreibung:**
@@ -108,7 +108,7 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > **Achtung:** Wird das Plugin zu einem späteren Zeitpunkt wieder aktiviert, werden beide Tabellen wieder hergestellt. Alle Daten, die sich zum Zeitpunkt der Deaktivierung in diesen befunden haben, sind aber unwiderruflich verloren! Sollten diese Daten später benötigt werden, müssen die Daten vor der Deaktivierung des Plugins gesichert werden!
 
 
-> ### `install_log_table()`
+> ### `➕install_log_table()`
 > **Ausführendes Ereignis:** Funktionsaufruf in activate()
 > 
 > **Beschreibung:**
@@ -126,7 +126,7 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > |points|DECIMAL|NOT NULL|Vergebe Punkte der Anfrage des [classifier](classifier.md) Moduls|
 
 
-> ### `install_bans_table()`
+> ### `➕install_bans_table()`
 > **Ausführendes Ereignis:** Funktionsaufruf in activate()
 > 
 > **Beschreibung:**
