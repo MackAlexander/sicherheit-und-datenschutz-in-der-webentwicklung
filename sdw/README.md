@@ -43,7 +43,6 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 
 >   ## 🔒Datenschutzerklärung
 >    - Dieses Plugin sammelt IP-Adressen und Anfragen, um die Sicherheit der Website zu gewährleisten. Die gesammelten Daten werden nur für diesen Zweck verwendet und nach 30 Tagen gelöscht.
->    - 
 > ### ❓Warum braucht es diese Daten?
 >    - Diese Daten sind notwendig, um die Website vor Angriffen zu schützen und sicherzustellen, dass nur legitime Anfragen zugelassen werden.
 > ### 🛠️ Was macht das Plugin mit diesen Daten?
@@ -55,21 +54,22 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > ###🗑️ Was passiert danach mit den Daten?
 > - Nach Ablauf der Speicherfrist werden die Daten **sicher gelöscht**, sodass sie nicht mehr auf Einzelpersonen zurückgeführt werden können. Dies stellt sicher, dass keine unnötigen personenbezogenen Daten gespeichert werden und die Privatsphäre der Benutzer gewahrt bleibt.
 > 
-> 🔒 Datenschutzinformationen für den Endanwender
+> 🔒 Zusammengefasste Datenschutzinformationen
 > Übersicht:
-> Die Struktur der Tabelle ist die folgende:
-> |Beschreibt,|🌐IP-Adressen|⏱️Zeit der Anfrage|🧭URL der Anfrage|🧑‍💻User-Agent|💬Anfragen
+>- 🌐 IP-Adressen: Das Plugin benötigt werden diese Daten, um die Sicherheit der Anwendung zu gewährleisten und schädliche Aktivitäten zu verhindern.
+>- ⏱️ Zeit der Anfrage: Zeitstempel der Anfragen werden erfasst, um Angriffsmuster zu erkennen und die Anwendung zu optimieren (keine personenbezogenen Daten).
+>- 🧭 URL der Anfrage: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
+>- 🧑‍💻 User-Agent: Die Sammlung des User-Agents zur Verbesserung der Kompatibilität und Sicherheit ist DSGVO-konform, solange die Daten zweckgebunden, minimiert und nicht für Trackingzwecke verwendet werden. Bedenken Sie die Anonymisierung/Pseudonymisierung zum Datenschutz.
+>- 💬 Anfragen: Zur Analyse werden, all diese DSGVO konformen Anfragen werden auf schädliche Aktivitäten geprüft.
+>
+> 🔒 Überblick über Art und Zweck der verwendeten Daten:
+>
+> |🛠️Beschreibung|🌐IP-Adressen|⏱️Zeit der Anfrage|🧭URL der Anfrage|🧑‍💻User-Agent|💬Anfragen
 > |---|---|---|---|---|---|
-> |welche Daten das Plugins sammelt|Diese Daten werden gesammelt, um potenziell unerwünschte oder schädliche Anfragen zu identifizieren und zu blockieren|Zeitstempel der Abfragen werden erfasst, um Muster zu erkennen und mögliche Missbrauchsversuche zu analysieren.|Die URL der Anfrage wird gesammelt, um zu überprüfen, welche Seiten oder Ressourcen aufgerufen werden und ob diese Anfragen legitim sind|Der User-Agent wird gesammelt, um das verwendete Gerät und den Browser zu identifizieren, was zur Verbesserung der Kompatibilität und Sicherheit der Anwendung beiträgt|Alle Anfragen werden analysiert, um schädliche Aktivitäten zu erkennen und zu verhindern|
-> |warum das Plugin diese Daten benötigt|Dies gewährleistet die Sicherheit der Anwendung und schädliche Aktivitäten werden verhindert|Dies wird vom Plugin verwendet, um die Nutzungsmuster zu analysieren und die Leistung der Anwendung zu optimieren|Um sicherzustellen, dass die aufgerufenen Ressourcen korrekt und sicher sind, wird vom Plugin die URL Anfragen gesammelt|Zur Verbesserung der Kompatibilität und Sicherheit der Anwendung werden diese Daten benötigt|Zur Identifizierung und Verhinderung von schädlichen Aktivitäten werden diese Daten benötigt|
-> |was das Plugin macht mit diesen Daten macht|Das Plugin nutzt diese Daten, um IP-Adressen zu blockieren und den Zugriff auf die Anwendungen auf Ihrer Website zu sichern.|Das Plugin nutzt diese Informationen zur Analyse von Nutzungsmustern und zur Leistungsoptimierung.|Diese Daten werden genutzt, um die Legitimität der Anfragen zu prüfen und sicherzustellen, dass keine unbefugten Zugriffe stattfinden|Diese Informationen werden zur Verbesserung der Kompatibilität und Sicherheit der Anwendung genutzt|Diese Daten werden zur Analyse und Verhinderung von schädlichen Aktivitäten verwendet|
-> |ob die gesammelten Daten personenbezogen sind|Es handelt sich hierbei um personenbezogene Daten nach DSGVO.|Der Zeitstempel der Anfrage ist keine personenbezogene Information.|Die URL kann personenbezogene Daten enthalten, z.B. Nutzernamen oder Profilinformationen|Die Speicherung des User-Agents ist nicht DSGVO-widrig, da die gesammelten User-Agent-Daten nicht mit anderen Daten kombiniert, um auf den Nutzer zu schließen, oder zu Trackingzwecken eingesetzt werden|Um zu analysieren, welche Anfragen schädlich sein könnten|
-
-> ##### 🌐 IP-Adressen: Das Plugin benötigt werden diese Daten, um die Sicherheit der Anwendung zu gewährleisten und schädliche Aktivitäten zu verhindern.
-> ##### ⏱️ Zeit der Anfrage: Zeitstempel der Anfragen werden erfasst, um Angriffsmuster zu erkennen und die Anwendung zu optimieren (keine personenbezogenen Daten).
-> ##### 🧭 URL der Anfrage: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
-> ##### 🧑‍💻 User-Agent: Die Sammlung des User-Agents zur Verbesserung der Kompatibilität und Sicherheit ist DSGVO-konform, solange die Daten zweckgebunden, minimiert und nicht für Trackingzwecke verwendet werden. Bedenken Sie die Anonymisierung/Pseudonymisierung zum Datenschutz.
-> ##### 💬 Anfragen: Zur Analyse werden, all diese DSGVO konformen Anfragen werden auf schädliche Aktivitäten geprüft.
+> |Welche Daten das Plugins sammelt|Diese Daten werden gesammelt, um potenziell unerwünschte oder schädliche Anfragen zu identifizieren und zu blockieren|Zeitstempel der Abfragen werden erfasst, um Muster zu erkennen und mögliche Missbrauchsversuche zu analysieren.|Die URL der Anfrage wird gesammelt, um zu überprüfen, welche Seiten oder Ressourcen aufgerufen werden und ob diese Anfragen legitim sind|Der User-Agent wird gesammelt, um das verwendete Gerät und den Browser zu identifizieren, was zur Verbesserung der Kompatibilität und Sicherheit der Anwendung beiträgt|Alle Anfragen werden analysiert, um schädliche Aktivitäten zu erkennen und zu verhindern|
+> |Warum das Plugin diese Daten benötigt|Dies gewährleistet die Sicherheit der Anwendung und schädliche Aktivitäten werden verhindert|Dies wird vom Plugin verwendet, um die Nutzungsmuster zu analysieren und die Leistung der Anwendung zu optimieren|Um sicherzustellen, dass die aufgerufenen Ressourcen korrekt und sicher sind, wird vom Plugin die URL Anfragen gesammelt|Zur Verbesserung der Kompatibilität und Sicherheit der Anwendung werden diese Daten benötigt|Zur Identifizierung und Verhinderung von schädlichen Aktivitäten werden diese Daten benötigt|
+> |Was das Plugin macht mit diesen Daten macht|Das Plugin nutzt diese Daten, um IP-Adressen zu blockieren und den Zugriff auf die Anwendungen auf Ihrer Website zu sichern.|Das Plugin nutzt diese Informationen zur Analyse von Nutzungsmustern und zur Leistungsoptimierung.|Diese Daten werden genutzt, um die Legitimität der Anfragen zu prüfen und sicherzustellen, dass keine unbefugten Zugriffe stattfinden|Diese Informationen werden zur Verbesserung der Kompatibilität und Sicherheit der Anwendung genutzt|Diese Daten werden zur Analyse und Verhinderung von schädlichen Aktivitäten verwendet|
+> |Ob die gesammelten Daten personenbezogen sind|Es handelt sich hierbei um personenbezogene Daten nach DSGVO.|Der Zeitstempel der Anfrage ist keine personenbezogene Information.|Die URL kann personenbezogene Daten enthalten, z.B. Nutzernamen oder Profilinformationen|Die Speicherung des User-Agents ist nicht DSGVO-widrig, da die gesammelten User-Agent-Daten nicht mit anderen Daten kombiniert, um auf den Nutzer zu schließen, oder zu Trackingzwecken eingesetzt werden|Um zu analysieren, welche Anfragen schädlich sein könnten|
 
 #
 
