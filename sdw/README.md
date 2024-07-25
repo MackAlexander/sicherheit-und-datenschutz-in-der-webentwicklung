@@ -81,7 +81,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 >    - Sie werden im Admin-Bereich benachrichtigt, wenn ein Benutzername mit einem angezeigten Namen übereinstimmt, um Sie auf potenzielle Sicherheitsrisiken hinzuweisen.
     Blockierte IPs werden nach einem bestimmten Zeitraum automatisch wieder freigegeben.
 
->## Technische Details
+>## 🔒 Technische Details
 >
 > **📊 Tabellen in der Datenbank**
 >   - Das Plugin erstellt zusätzliche Tabellen in der WordPress-Datenbank
