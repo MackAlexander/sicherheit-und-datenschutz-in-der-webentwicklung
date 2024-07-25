@@ -1,6 +1,6 @@
 # classifier
 
-## Abhängigkeiten zu anderen Modulen
+## Abhängigkeiten
 - [config](config.md)
 - [suspicious-links](suspicious-links.md)
 
