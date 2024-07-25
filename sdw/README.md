@@ -6,7 +6,9 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 
 > # 📚 Inhalt
 >    - **🚀 Mehrwert**
->        - 
+>        -
+>    -  **🏁 Verwendungszweck**
+>        -  
 >    - **🚧 Abgrenzung**
 >        - 
 >    - **🔒 Datenschutzinformationen**
@@ -23,6 +25,10 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > **🚀 Mehrwert**
 > 
 > Durch die Installation dieses Plugins verhindern Sie, dass Angreifer Benutzernamen auf Ihrer Website abfragen und möglicherweise Passwörter knacken können. Außerdem sorgt das Plugin dafür, dass unerwünschte Anfragen von den installierten **WordPress Plugins** mit Sicherheitslücken automatisch **erkannt** und **blockiert** werden, was die Sicherheit Ihrer Website erhöht.
+
+>  **🏁 Verwendungszweck**
+> 
+> Ziel des Plugins ist es Benutzernamen zu verschleiern, Angreifern den Zugriff auf die Website zu erschweren und IPs über ein Punktesystem je nach Schweregrad zu sperren, welches der Benutzer selbst konfigurieren kann.
 
 > **🚧 Abgrenzung**
 > #### Dieses Plugin:
