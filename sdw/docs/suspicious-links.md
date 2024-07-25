@@ -1,6 +1,6 @@
 # suspicious-links
 
-## Abhängigkeiten zu anderen Modulen
+## Abhängigkeiten
 - Keine
 
 
