@@ -1,6 +1,6 @@
 # admin-menu
 
-## Abhängigkeiten zu anderen Modulen
+## Abhängigkeiten
 - [config](config.md)
 
 ## Beschreibung
