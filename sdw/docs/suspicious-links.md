@@ -8,8 +8,8 @@
 Dieses Modul beinhaltet Konstanten, die verdächtige Links und Dateien mit bekannten Sicherheitslücken auflisten.
 
 ## Konstanten
-### Plugins
-Die Konstante `PLUGINS` enthält eine Sammlung an Links zu Plugin Dateien mit bekannten Sicherheitslücken.
+> ### Plugins
+> Die Konstante `PLUGINS` enthält eine Sammlung an Links zu Plugin Dateien mit bekannten Sicherheitslücken.
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
