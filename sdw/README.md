@@ -70,7 +70,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > |Was das Plugin macht mit diesen Daten macht|Das Plugin nutzt diese Daten, um IP-Adressen zu blockieren und den Zugriff auf die Anwendungen auf Ihrer Website zu sichern.|Das Plugin nutzt diese Informationen zur Analyse von Nutzungsmustern und zur Leistungsoptimierung.|Diese Daten werden genutzt, um die Legitimität der Anfragen zu prüfen und sicherzustellen, dass keine unbefugten Zugriffe stattfinden|Diese Informationen werden zur Verbesserung der Kompatibilität und Sicherheit der Anwendung genutzt|Diese Daten werden zur Analyse und Verhinderung von schädlichen Aktivitäten verwendet|
 > |Sind die gesammelten Daten personenbezogen sind|Es handelt sich hierbei um personenbezogene Daten nach DSGVO.|Der Zeitstempel der Anfrage ist keine personenbezogene Information.|Die URL kann personenbezogene Daten enthalten, z.B. Nutzernamen oder Profilinformationen|Die Speicherung des User-Agents ist nicht DSGVO-widrig, da die gesammelten User-Agent-Daten nicht mit anderen Daten kombiniert, um auf den Nutzer zu schließen, oder zu Trackingzwecken eingesetzt werden|Um zu analysieren, welche Anfragen schädlich sein könnten|
 
->## Hinweise zur Nutzung des Plugins
+>## 💡 Hinweise zur Nutzung des Plugins
 >
 > **📦 Installation**
 >    - Lade das Plugin in dein WordPress-Verzeichnis hoch (/wp-content/plugins/).
