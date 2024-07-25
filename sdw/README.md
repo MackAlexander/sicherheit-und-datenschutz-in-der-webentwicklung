@@ -48,7 +48,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 >    - **Analyse:** Die gesammelten Daten werden analysiert, um schädliche Muster zu erkennen.
 >    - **Blockierung:** IP-Adressen, die schädliche Anfragen senden, werden blockiert.
 > ### ⏳ Wie lange werden die Daten gespeichert?
->    - Die Daten werden für **30 Tage** gespeichert und danach dem 30. Tag automatisch gelöscht.
+>    - Die Daten werden für **30 Tage** gespeichert und nach dem 30. Tag automatisch gelöscht.
 >    - Durch das Deaktivieren oder das Löschen dieses WordPress-Plugins werden alle personenbezogene Daten gelöscht, indem das Plugin die gesamten Tabellen löscht, welche personenbezogene Daten enthalten.
 > ### 🗑️ Was passiert danach mit den Daten?
 > - Nach Ablauf der Speicherfrist werden die Daten **sicher gelöscht**, sodass sie nicht mehr auf Einzelpersonen zurückgeführt werden können. Dies stellt sicher, dass keine unnötigen personenbezogenen Daten gespeichert werden und die Privatsphäre der Benutzer gewahrt bleibt.
