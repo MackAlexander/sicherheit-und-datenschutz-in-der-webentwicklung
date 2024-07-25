@@ -9,7 +9,7 @@ Dieses Modul analysiert und klassifiziert eingehende Anfragen anhand ihrer `URL`
 
 
 ## Funktionen
-> ### `classify_request($uri, $user_agent, $status_code)`
+> ### `🧑‍💻classify_request($uri, $user_agent, $status_code)`
 > **Ausführendes Ereignis:** Funktionsaufruf in shutdown() des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
@@ -28,7 +28,7 @@ Dieses Modul analysiert und klassifiziert eingehende Anfragen anhand ihrer `URL`
 > |`$status_code` ist `404`|404-not-found||
 
 
-> ### `calculate_points($classification)`
+> ### `📊calculate_points($classification)`
 > **Ausführendes Ereignis:** Funktionsaufruf in shutdown() des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
