@@ -1,6 +1,6 @@
 # cron
 
-## Abhängigkeiten zu anderen Modulen
+## Abhängigkeiten
 - [config](config.md)
 - [database](database.md)
 
