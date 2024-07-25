@@ -36,7 +36,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > - protokolliert nur bösartige Requests
 > - trackt nur Requests zum Schutz vor bekannten Wordpress Plugins mit Sicherheitslücken
 > - funktioniert nicht in 100% der Fälle. Unter Umständen können Plugin-Funktionen nicht mehr funktionieren.
-> - könnte nach einem Wordpress-Update nur eingeschränkt oder gar nicht mehr funktionieren
+> - könnte nach einem WordPress-Update nur eingeschränkt oder gar nicht mehr funktionieren
 > - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
 > - ist **NICHT** für einen vollständigen Schutz vor Hackern geeignet
 
@@ -52,6 +52,8 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 >    - Durch das Deaktivieren oder das Löschen dieses WordPress-Plugins werden alle personenbezogene Daten gelöscht, indem das Plugin die gesamten Tabellen löscht, welche personenbezogene Daten enthalten.
 > ### 🗑️ Was passiert danach mit den Daten?
 > - Nach Ablauf der Speicherfrist werden die Daten **sicher gelöscht**, sodass sie nicht mehr auf Einzelpersonen zurückgeführt werden können. Dies stellt sicher, dass keine unnötigen personenbezogenen Daten gespeichert werden und die Privatsphäre der Benutzer gewahrt bleibt.
+> ### 📋 Wie aussagekräftig ist der Log?
+> - Das Plugin trackt ausschließlich bösartige Requests, dies dient der Übersichtlichkeit und der Datensparsamkeit und ist ein wichtiger Aspekt des Plugins, um die Performance der Website nicht zu Ungunsten des Nutzers zu verschlechtern
 > 
 > ## 🔒 Zusammengefasste Datenschutzinformationen
 > Übersicht:
