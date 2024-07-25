@@ -53,7 +53,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > ### 🗑️ Was passiert danach mit den Daten?
 > - Nach Ablauf der Speicherfrist werden die Daten **sicher gelöscht**, sodass sie nicht mehr auf Einzelpersonen zurückgeführt werden können. Dies stellt sicher, dass keine unnötigen personenbezogenen Daten gespeichert werden und die Privatsphäre der Benutzer gewahrt bleibt.
 > ### 📋 Wie aussagekräftig ist der Log?
-> - Das Plugin trackt ausschließlich bösartige Requests, dies dient der Übersichtlichkeit und der Datensparsamkeit und ist ein wichtiger Aspekt des Plugins, um die Performance der Website nicht zu Ungunsten des Nutzers zu verschlechtern
+> - Das Plugin trackt ausschließlich bösartige Requests, dies dient der Übersichtlichkeit und der Datensparsamkeit und ist ein wichtiger Aspekt des Plugins, um die Performance der Website nicht zu Ungunsten des Nutzers zu verschlechtern.
 > 
 > ## 🔒 Zusammengefasste Datenschutzinformationen
 > Übersicht:
