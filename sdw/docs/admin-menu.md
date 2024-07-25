@@ -1,4 +1,4 @@
-# admin_menu
+# admin-menu
 
 ## Abhängigkeiten zu anderen Modulen
 - [config](config.md)
