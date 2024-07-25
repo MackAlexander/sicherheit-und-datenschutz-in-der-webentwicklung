@@ -34,6 +34,8 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > - ist nur für WordPress geeignet
 > - protokolliert nur bösartige Requests
 > - trackt nur Requests zum Schutz vor bekannten Wordpress Plugins mit Sicherheitslücken
+> - funktioniert nicht in 100% der Fälle. Unter Umständen können Plugin-Funktionen nicht mehr funktionieren.
+> - könnte nach einem Wordpress-Update nur eingeschränkt oder gar nicht mehr funktionieren
 > - garantiert nicht, dass neue Sicherheitslücken sofort oder überhaupt geschlossen werden
 > - ist **NICHT** für einen vollständigen Schutz vor Hackern geeignet
 
