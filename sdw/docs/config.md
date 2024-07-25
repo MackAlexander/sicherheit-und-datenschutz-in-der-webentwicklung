@@ -1,5 +1,5 @@
 # Beschreibung
-Dieses Modul dient als generelle Konfigurationsdatei des Plugins. Es definiert Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der vergebenen Punkte für verschiedene bösartigen Anfragen.
+Dieses Modul dient als zentrale Konfigurationsdatei des Plugins. Es definiert Konstanten zur Steuerung des Verhaltens und der Grenzwerte für sicherheitsrelevante Aktionen sowie der vergebenen Punkte für verschiedene bösartigen Anfragen.
 
 # Konstanten
 | Name | Beschreibung | Standardwert |
