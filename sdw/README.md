@@ -1,4 +1,5 @@
-# THM Security Plugin
+# WPProtect
+[![WPProtect.png](https://i.postimg.cc/YCKJXFtL/WPProtect.png)](https://postimg.cc/YhRn0hGt)
 
 **🔍 Beschreibung**
 
