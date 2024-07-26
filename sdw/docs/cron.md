@@ -32,6 +32,7 @@ Dieses Modul verwaltet den täglichen Cron-Job zur Bereinigung alter Zugriffprot
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
+- [Technische README.md](README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
