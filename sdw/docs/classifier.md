@@ -39,7 +39,7 @@ Dieses Modul analysiert und klassifiziert eingehende Anfragen anhand ihrer `URL`
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
-- [Technische Dokumentation md](README.md)
+- [Technische README.md](README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [config.md](config.md)
