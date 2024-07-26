@@ -10,9 +10,9 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 >    - **🏁 Verwendungszweck**
 >    - **🚧 Abgrenzung**
 >    - **🔒 Datenschutzinformationen**
->    - **🔒 Technische Details**
->    - **📦 Installation**
 >    - **💡 Hinweise**
+>    - **📦 Installation**
+>    - **🔒 Technische Details**
 >    - **🧩 Links zu den Modulen**
 
 > **🚀 Mehrwert**
