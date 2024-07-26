@@ -26,6 +26,7 @@ Dieses Modul dient als zentrale Konfigurationsdatei des Plugins. Es definiert Ko
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
+- [Technische Dokumentation md](README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
