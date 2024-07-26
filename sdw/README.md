@@ -92,7 +92,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 
 > **🧩 Links zu den Modulen**
 > 
->    🔗[Technische Dokumentation md](docs/README.md)
+>    🔗[Technische README.md](docs/README.md)
 > 
 >    🔗[admin-menu.md](docs/admin-menu.md)
 > 
