@@ -21,7 +21,7 @@ Dieses Modul überwacht HTTP-Anfragen in Echtzeit, klassifiziert sie auf ihre Si
 
 # 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
-- [admin_menu.md](admin_menu.md)
+- [admin-menu.md](admin-menu.md)
 - [classifier.md](classifier.md)
 - [config.md](config.md)
 - [cron.md](cron.md)
