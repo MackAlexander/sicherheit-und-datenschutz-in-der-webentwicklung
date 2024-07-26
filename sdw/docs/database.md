@@ -142,6 +142,7 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
+- [Technische README.md](README.md)
 - [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
