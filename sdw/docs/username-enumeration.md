@@ -118,7 +118,7 @@ Dieses Modul verbessert die Sicherheit der Website, indem es Benutzernamen gezie
 
 # 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
-- [admin_menu.md](admin_menu.md)
+- [admin-menu.md](admin-menu.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
 - [config.md](config.md)
