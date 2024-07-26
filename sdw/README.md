@@ -91,7 +91,9 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 >    - template_redirect: Deaktiviert URLs, die Benutzernamen enthalten.
 
 > **🧩 Links zu den Modulen**
->
+> 
+>    🔗[Technische Dokumentation md](docs/README.md)
+> 
 >    🔗[admin-menu.md](docs/admin-menu.md)
 > 
 >    🔗[badrequest-tracker.md](docs/badrequest-tracker.md)
