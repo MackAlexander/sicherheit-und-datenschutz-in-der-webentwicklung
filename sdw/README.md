@@ -48,7 +48,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > ### 📋 Wie aussagekräftig ist der Log?
 > - Das Plugin trackt ausschließlich bösartige Requests, dies dient der Übersichtlichkeit und der Datensparsamkeit und ist ein wichtiger Aspekt des Plugins, um die Performance der Website nicht zu Ungunsten des Nutzers zu verschlechtern.
 > 
-> ## 🔒 Copy-and-Paste Datenschutzinformation für den Endanwender:
+> ## 🔒 Copy-and-Paste Datenschutzerklärung für den Endanwender:
 > Übersicht:
 > ```
 >- 🌐 IP-Adressen: Das Plugin benötigt werden diese Daten, um die Sicherheit der Anwendung zu gewährleisten und schädliche Aktivitäten zu verhindern.
