@@ -50,12 +50,13 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 > 
 > ## 🔒 Zusammengefasste Datenschutzinformationen
 > Übersicht:
+> ```
 >- 🌐 IP-Adressen: Das Plugin benötigt werden diese Daten, um die Sicherheit der Anwendung zu gewährleisten und schädliche Aktivitäten zu verhindern.
 >- ⏱️ Zeit der Anfrage: Zeitstempel der Anfragen werden erfasst, um Angriffsmuster zu erkennen und die Anwendung zu optimieren (keine personenbezogenen Daten).
 >- 🧭 URL der Anfrage: Die URL der Anfrage wird gesammelt, um die Legitimität der Anfragen zu prüfen und Sicherheitsrisiken zu minimieren (möglicherweise personenbezogene Daten enthalten).
 >- 🧑‍💻 User-Agent: Die Sammlung des User-Agents zur Verbesserung der Kompatibilität und Sicherheit ist DSGVO-konform, solange die Daten zweckgebunden, minimiert und nicht für Trackingzwecke verwendet werden. Bedenken Sie die Anonymisierung/Pseudonymisierung zum Datenschutz.
 >- 💬 Anfragen: Zur Analyse werden, all diese DSGVO konformen Anfragen werden auf schädliche Aktivitäten geprüft.
->
+>```
 > 🔒 Überblick über Art und Zweck der verwendeten Daten:
 >
 > |🛠️ Beschreibung|🌐 IP-Adressen|⏱️ Zeit der Anfrage|🧭 URL der Anfrage|🧑‍💻 User-Agent|💬 Anfragen
