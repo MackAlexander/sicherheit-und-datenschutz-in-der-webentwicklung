@@ -80,3 +80,4 @@ Betrachtet man die Dauer pro Anfrage, ist eine Verschlechterung von etwa 4,8% bz
 - [suspicious-links.md](suspicious-links.md)
 - [username-enumeration.md](username-enumeration.md)
 
+## 🔗 [../README.md](admin-menu.md)
