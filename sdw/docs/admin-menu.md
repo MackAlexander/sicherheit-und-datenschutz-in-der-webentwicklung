@@ -54,6 +54,7 @@ Dieses Modul fügt ein Admin-Menü im Wordpress-Admin-Bereich hinzu, indem Proto
 
 ## 🔗 Links zu den anderen Modulen
 - [README.md](../README.md)
+- [Technische Dokumentation md](README.md)
 - [badrequest-tracker.md](badrequest-tracker.md)
 - [classifier.md](classifier.md)
 - [config.md](config.md)
