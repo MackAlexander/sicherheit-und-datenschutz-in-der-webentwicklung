@@ -29,7 +29,7 @@ Jedes Modul verwendet den Namespace `WPProtect\Security` und besteht dabei aus e
 |[user_profile_update_errors](https://developer.wordpress.org/reference/hooks/user_profile_update_errors/)|[username-enumeration.php](username-enumeration.md)|user_profile_update_errors()|
 |[template_redirect](https://developer.wordpress.org/reference/hooks/template_redirect/) |[username-enumeration.php](username-enumeration.md)|disable_author_page()|
 |[admin_notices](https://developer.wordpress.org/reference/hooks/admin_notices/) |[username-enumeration.php](username-enumeration.md)|admin_notices()|
-|(https://developer.wordpress.org/reference/hooks/the_author/) |[username-enumeration.php](username-enumeration.md)|the_author()|
+|[the_author](https://developer.wordpress.org/reference/hooks/the_author/) |[username-enumeration.php](username-enumeration.md)|the_author()|
 |[get_the_author_display_name](https://core.trac.wordpress.org/browser/tags/3.9.1/src/wp-includes/author-template.php#L116)|[username-enumeration.php](username-enumeration.md)|get_the_author_display_name()|
 |[get_comment_author](https://developer.wordpress.org/reference/hooks/get_comment_author/)|[username-enumeration.php](username-enumeration.md)|get_comment_author()|
 |[author_link](https://developer.wordpress.org/reference/hooks/author_link/)|[username-enumeration.php](username-enumeration.md)|author_link()|
