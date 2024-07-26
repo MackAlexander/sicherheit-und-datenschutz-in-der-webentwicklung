@@ -5,7 +5,7 @@
 
 ## Beschreibung
 Dieses Modul steuert zentral alle Zugriffe auf die Wordpress Datenbank, die für die Verwendung des Plugins notwendig sind.
-Es werden zwei neue Tabellen `sdw_security_access_log` und `sdw_security_bans` angelegt, sobald das Plugin deaktiviert wird. Beide Tabellen werden mit dem entsprechenden Prefix `$wpdb->prefix` angelegt, um Komplikationen bei mehreren Wordpress Instanzen zu verhindern.
+Es werden zwei neue Tabellen `wpprotect_access_log` und `wpprotect_bans` angelegt, sobald das Plugin deaktiviert wird. Beide Tabellen werden mit dem entsprechenden Prefix `$wpdb->prefix` angelegt, um Komplikationen bei mehreren Wordpress Instanzen zu verhindern.
 
 Alle Datenbankoperationen werden über `wpdb` Klasse initiiert, um die Sicherheit der Website zu gewährleisten und unabhängig von der zu Grunde liegenden Datenbanktechnologie zu sein.
 Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variable `$access_log_table_name` bzw. `$bans_table_name` zusammengesetzt.
@@ -22,70 +22,70 @@ Der Tabellenname jeder Operation wird dabei über `$wpdb->prefix` und die Variab
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_access_log()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
-> Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `sdw_security_access_log` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
+> Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `wpprotect_access_log` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
 
 
 > ### `🔓get_access_log_count()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_access_log()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
-> Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `sdw_security_access_log` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
+> Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `wpprotect_access_log` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
 
 
 > ### `⛔get_bans($limit, $offset)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_bans()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
-> Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `sdw_security_bans` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
+> Es werden mittels `$wpdb->get_results` und `$wpdb->prepare` `$limit` Einträge beginnend ab dem übergebenen `$offset` mit alle Daten der `wpprotect_bans` Tabelle gelesen, absteigend nach dem Zeitpunkt sortiert und zurückgegeben. 
 
 
 > ### `⛔get_bans_count()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `render_bans()` des [admin-menu](admin-menu.md) Moduls
 > 
 > **Beschreibung:**
-> Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `sdw_security_bans` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
+> Es wird mittels `$wpdb->get_results` ein `SELECT COUNT(*)` auf die `wpprotect_bans` Tabelle ausgeführt und die Anzahl an Einträgen zurückgegeben. 
 
 
 > ### `📋append_access_log($ip_address, $url, $user_agent, $response_code, $classification, $points)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
-> Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `sdw_security_access_log` eingefügt. 
+> Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `wpprotect_access_log` eingefügt. 
 
 
 > ### `🚫ban_ip($ip_address, $duration)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
-> Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `sdw_security_bans` eingefügt. Der Beginn der Sperrung wird dabei über die SQL Funktion `NOW()` berechnet und das Ende der Sperre über die SQL Funktion `DATE_ADD(NOW(), INTERVAL %d DAY)` und der übergebenen `$duration` berechnet.
+> Die übergebenen Parameter werden mittels `INSERT`, `$wpdb->prepare` und `$wpdb->query` in die Tabelle `wpprotect_bans` eingefügt. Der Beginn der Sperrung wird dabei über die SQL Funktion `NOW()` berechnet und das Ende der Sperre über die SQL Funktion `DATE_ADD(NOW(), INTERVAL %d DAY)` und der übergebenen `$duration` berechnet.
 
 
 > ### `📈get_total_points($ip_address)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `shutdown()` und `wp_login_failed($username, $error)` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
-> Aus der Tabelle `sdw_security_access_log` werden mittels `$wpdb->prepare`, `$wpdb->get_var, `SELECT SUM(points)` die summierten Punkte der übergebenen `$ip_address` zurückgegeben. 
+> Aus der Tabelle `wpprotect_access_log` werden mittels `$wpdb->prepare`, `$wpdb->get_var, `SELECT SUM(points)` die summierten Punkte der übergebenen `$ip_address` zurückgegeben. 
 
 
 > ### `🗑️remove_old_logs($days)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `remove_old_entries()` des [cron](cron.md) Moduls
 > 
 > **Beschreibung:**
-> Mittels `DELETE`, `$wpdb->prepare` und `$wpdb->query` werden alle Einträge der `sdw_security_access_log` Tabelle gelöscht, die älter als die übergebenen `$days` sind. Die Brechnung des exakten Datums erfolgt dabei über die Abfrage `WHERE time < NOW() - INTERVAL %d DAY` und den übergebenen `$days`.
+> Mittels `DELETE`, `$wpdb->prepare` und `$wpdb->query` werden alle Einträge der `wpprotect_access_log` Tabelle gelöscht, die älter als die übergebenen `$days` sind. Die Brechnung des exakten Datums erfolgt dabei über die Abfrage `WHERE time < NOW() - INTERVAL %d DAY` und den übergebenen `$days`.
 
 
 > ### `🗑️remove_old_bans()`
 > **Ausführendes Ereignis:** Funktionsaufruf in `remove_old_entries()` des [cron](cron.md) Moduls
 > 
 > **Beschreibung:**
-> Mittels `DELETE` und `$wpdb->query` werden alle Einträge der `sdw_security_bans` Tabelle gelöscht, bei denen das Ende der Sperrung älter ist, als der jetzige Zeitpunkt. Die Brechnung erfolgt dabei über die Abfrage `WHERE end_time < NOW()`.
+> Mittels `DELETE` und `$wpdb->query` werden alle Einträge der `wpprotect_bans` Tabelle gelöscht, bei denen das Ende der Sperrung älter ist, als der jetzige Zeitpunkt. Die Brechnung erfolgt dabei über die Abfrage `WHERE end_time < NOW()`.
 
 
 > ### `🔎is_ip_blocked($ip_address)`
 > **Ausführendes Ereignis:** Funktionsaufruf in `check_ip_adress()` und `shutdown()` des [badrequest-tracker](badrequest-tracker.md) Moduls
 > 
 > **Beschreibung:**
-> Es wird mittels `$wpdb->get_var`, `$wpdb->prepare` und der übergebenen `$ip_address` geprüft, ob ein aktueller Einträg in der `sdw_security_bans` Tabelle besteht, bei der das Enddatum über den aktuellen Zeitpunkt hinausgeht.
+> Es wird mittels `$wpdb->get_var`, `$wpdb->prepare` und der übergebenen `$ip_address` geprüft, ob ein aktueller Einträg in der `wpprotect_bans` Tabelle besteht, bei der das Enddatum über den aktuellen Zeitpunkt hinausgeht.
 >
 > Es wird nicht nur geprüft, ob es einen Eintrag in der Tabelle gibt, sondern auch das `end_time` Feld betrachtet. Da der Cron-Job zur Bereinigung der Tabellen nur einmal täglich läuft, wird so gewährleistet, dass Zugriffe auf die Seite wieder möglich sind, sobald eine Sperrung abgelaufen ist.
 
