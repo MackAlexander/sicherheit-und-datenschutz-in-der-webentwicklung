@@ -99,7 +99,7 @@ Dieses Plugin verbessert die **Sicherheit Ihrer WordPress-Website**, indem es Be
 
 > **🧩 Links zu den Modulen**
 >
->    🔗[admin_menu.md](docs/admin_menu.md)
+>    🔗[admin-menu.md](docs/admin-menu.md)
 > 
 >    🔗[badrequest-tracker.md](docs/badrequest-tracker.md)
 > 
